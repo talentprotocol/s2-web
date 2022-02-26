@@ -1,11 +1,11 @@
-import {StyledDescription} from "./styled"
+import { StyledDescription } from "./styled";
 
 interface Props {
-    content: string;
+  content: string;
 }
 
-const Description = ({content}: Props) => (
-    <StyledDescription>{content}</StyledDescription>
-)
+const Description = ({ content }: Props) => (
+  <StyledDescription>{content}</StyledDescription>
+);
 
 export default Description;

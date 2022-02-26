@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { COLORS } from "../../_static/color-palette";
+import { fontDefault } from "../../_static/typography";
 
 export const StyledDescription = styled.p`
   margin: 0;
-  font-family: Plus Jakarta Sans, serif;
+  font-family: ${fontDefault};
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

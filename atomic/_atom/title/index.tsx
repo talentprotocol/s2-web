@@ -1,11 +1,11 @@
-import {StyledTitle} from "./styled"
+import { StyledTitle } from "./styled";
 
 interface Props {
-    content: string;
+  content: string;
 }
 
-const Title = ({content}: Props) => (
-    <StyledTitle>{content}</StyledTitle>
-)
+const Title = ({ content }: Props) => (
+  <StyledTitle>{content}</StyledTitle>
+);
 
 export default Title;

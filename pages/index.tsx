@@ -1,15 +1,11 @@
 import type { NextPage } from "next";
 import { Page } from "atomic/_static/containers";
-import Hero from "components/hero";
-import HeroCopy from "components/hero-copy";
-import {HERO_SECTION_1} from "copy/homepage"
+import LandingSection from "components/page-sections/landing-section";
 
 const Home: NextPage = () => {
   return (
     <Page>
-      <Hero>
-        <HeroCopy subTitle={HERO_SECTION_1.subTitle}/>
-      </Hero>
+      <LandingSection />
     </Page>
   );
 };

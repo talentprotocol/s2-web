@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Type } from "./types";
 import { COLORS } from "../../_static/color-palette";
+import { fontDefault } from "../../_static/typography";
 
 export const StyledSubTitle = styled.h3<{ type: Type }>`
   margin: 0;
-  font-family: Plus Jakarta Sans, serif;
+  font-family: ${fontDefault};
   font-style: normal;
   font-weight: bold;
   font-size: 12px;

@@ -1,4 +1,4 @@
-import {useMemo} from "react";
+import { useMemo } from "react";
 import { Container } from "./styled";
 import { Type as SubTitleType } from "atomic/_atom/subTitle/types";
 import SubTitle from "atomic/_atom/subTitle";
@@ -12,25 +12,38 @@ interface Props {
   };
   title?: string;
   description?: string;
+  children: JSX.Element | JSX.Element[];
 }
 
-const HeroCopy = ({ subTitle, title, description }: Props) => {
-  const memoizedSubTitle = useMemo(() => subTitle && (
-      <SubTitle type={subTitle.type} content={subTitle.content}/>
-  ), [subTitle]);
-  const memoizedTitle = useMemo(() => title && (
-      <Title content={title}/>
-  ), [title]);
-  const memoizedDescription = useMemo(() => description && (
-      <Description content={description}/>
-  ), [description]);
-  return (
-      <Container>
-        {memoizedSubTitle}
-        {memoizedTitle}
-        {memoizedDescription}
-      </Container>
+const HeroCopy = ({
+  subTitle,
+  title,
+  description,
+  children = [],
+}: Props) => {
+  const memoizedSubTitle = useMemo(
+    () =>
+      subTitle && (
+        <SubTitle type={subTitle.type} content={subTitle.content} />
+      ),
+    [subTitle]
   );
-}
+  const memoizedTitle = useMemo(
+    () => title && <Title content={title} />,
+    [title]
+  );
+  const memoizedDescription = useMemo(
+    () => description && <Description content={description} />,
+    [description]
+  );
+  return (
+    <Container>
+      {memoizedSubTitle}
+      {memoizedTitle}
+      {memoizedDescription}
+      {children}
+    </Container>
+  );
+};
 
 export default HeroCopy;

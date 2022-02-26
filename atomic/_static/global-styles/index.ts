@@ -4,7 +4,6 @@ import { COLORS } from "../color-palette";
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
-    width: 100%;
   }
   
   body {
