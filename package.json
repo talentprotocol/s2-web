@@ -8,8 +8,9 @@
     "start": "next start -p 8080",
     "lint": "next lint",
     "ts": "tsc",
-    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,css,md}\"",
-    "posttest": "npm run format"
+    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx}\"",
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.23",
@@ -22,9 +23,16 @@
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "commitizen": "^4.2.4",
     "eslint": "8.9.0",
     "eslint-config-next": "12.1.0",
     "prettier": ">=2",
-    "typescript": "4.5.5"
+    "typescript": "4.5.5",
+    "husky": "^7.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
   }
 }

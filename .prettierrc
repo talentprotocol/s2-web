@@ -1,16 +1,10 @@
 {
-  "useTabs": true,
+  "semi": true,
+  "singleQuote": false,
+  "printWidth": 70,
+  "useTabs": false,
+  "tabWidth": 2,
   "overrides": [
-    {
-      "files": "*.md",
-      "options": {
-        "printWidth": 70,
-        "useTabs": false,
-        "trailingComma": "none",
-        "arrowParens": "avoid",
-        "proseWrap": "never"
-      }
-    },
     {
       "files": "*.{json,babelrc,eslintrc,remarkrc,prettierrc}",
       "options": {
