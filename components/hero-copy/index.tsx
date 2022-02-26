@@ -1,5 +1,9 @@
 import { useMemo } from "react";
-import { Container } from "./styled";
+import {
+  Container,
+  TitleContainer,
+  DescriptionContainer,
+} from "./styled";
 import { Type as SubTitleType } from "atomic/_atom/subTitle/types";
 import SubTitle from "atomic/_atom/subTitle";
 import Title from "atomic/_atom/title";
@@ -12,7 +16,7 @@ interface Props {
   };
   title?: string;
   description?: string;
-  children: JSX.Element | JSX.Element[];
+  children?: JSX.Element | JSX.Element[];
 }
 
 const HeroCopy = ({
@@ -29,11 +33,21 @@ const HeroCopy = ({
     [subTitle]
   );
   const memoizedTitle = useMemo(
-    () => title && <Title content={title} />,
+    () =>
+      title && (
+        <TitleContainer hasMargin={!!subTitle}>
+          <Title content={title} />
+        </TitleContainer>
+      ),
     [title]
   );
   const memoizedDescription = useMemo(
-    () => description && <Description content={description} />,
+    () =>
+      description && (
+        <DescriptionContainer hasMargin={!!title}>
+          <Description content={description} />
+        </DescriptionContainer>
+      ),
     [description]
   );
   return (
