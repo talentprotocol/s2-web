@@ -4,6 +4,7 @@ import { COLORS } from "../../atomic/_static/color-palette";
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 64px;
+  position: absolute;
   display: flex;
   align-items: center;
   padding: 22px 24px;

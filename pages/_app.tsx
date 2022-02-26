@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { AppProps } from "next/app";
 import "normalize.css";
+import "@fontsource/plus-jakarta-sans";
 import GlobalStyles from "atomic/_static/global-styles";
 import Header from "components/header";
 
