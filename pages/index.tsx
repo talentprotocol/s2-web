@@ -1,9 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return (
-      <div>Talent Protocol</div>
-  )
-}
+	return <></>;
+};
 
 export default Home;
