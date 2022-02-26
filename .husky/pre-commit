@@ -4,4 +4,3 @@
 yarn format
 yarn lint
 yarn ts
-yarn commit
