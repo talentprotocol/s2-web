@@ -6,10 +6,12 @@ import { Type } from "./types";
 const buildButton = (type: Type) =>
   type === Type.PRIMARY
     ? `
+  padding: 12px 32px;
   background: ${COLORS.PURPLE};
   color: ${COLORS.WHITE};
   `
     : `
+  padding: 11px 31px;
   background: ${COLORS.BLACK};
   color: ${COLORS.PURPLE};
   border: 1px solid ${COLORS.PURPLE};`;
@@ -18,7 +20,6 @@ export const StyledButton = styled.a<{ type: Type }>`
   border: none;
   ${({ type }) => buildButton(type)}
   font-family: ${fontDefault};
-  padding: 12px 32px;
   outline: none;
   font-style: normal;
   font-weight: bold;
@@ -26,6 +27,7 @@ export const StyledButton = styled.a<{ type: Type }>`
   line-height: 165%;
   border-radius: 4px;
   display: inline-flex;
+  justify-content: center;
 `;
 
 export const ChildrenContainer = styled.span`

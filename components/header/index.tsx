@@ -1,3 +1,4 @@
+import { useCallback, useMemo } from "react";
 import {
   HeaderContainer,
   LogoArea,
@@ -6,15 +7,31 @@ import {
 } from "./styled";
 import Logo from "atomic/_atom/logo";
 
-const Header = () => (
-  <HeaderContainer>
-    <LogoArea>
-      <Logo />
-    </LogoArea>
-    <ActionArea>
-      <MobileMenu />
-    </ActionArea>
-  </HeaderContainer>
-);
+interface Props {
+  setSidebarStatus: (A: boolean) => void;
+  isSidebarVisible: boolean;
+}
+
+const Header = ({ setSidebarStatus, isSidebarVisible }: Props) => {
+  const handleMenuClick = useCallback(() => {
+    setSidebarStatus(!isSidebarVisible);
+  }, [isSidebarVisible]);
+  const memoizedLogo = useMemo(
+    () => (
+      <LogoArea>
+        <Logo />
+      </LogoArea>
+    ),
+    []
+  );
+  return (
+    <HeaderContainer>
+      {memoizedLogo}
+      <ActionArea>
+        <MobileMenu onClick={handleMenuClick} />
+      </ActionArea>
+    </HeaderContainer>
+  );
+};
 
 export default Header;

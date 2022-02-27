@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Logo from "atomic/_atom/logo";
 import { LOGO_SIZE } from "atomic/_atom/logo/types";
 import { FooterCopy as COPY } from "copy/footer";
@@ -15,7 +16,6 @@ import {
   Copyright,
   LogosArea,
 } from "./styled";
-import { useMemo } from "react";
 
 const Footer = () => {
   const projectList = useMemo(

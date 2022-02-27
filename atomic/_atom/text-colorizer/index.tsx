@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from "react";
+import { useMemo } from "react";
 import { COLORS, AvailableColors } from "../../_static/color-palette";
 import { Colorized } from "./styled";
 

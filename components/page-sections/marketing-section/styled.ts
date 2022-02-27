@@ -15,9 +15,13 @@ export const ImageContainer = styled.div`
   transform: translate(12%, 0);
 `;
 
+export const ImageRelativeContainer = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
+`;
+
 export const StyledImage = styled(Image).attrs(() => ({
-  height: "800px",
-  width: "1080px",
   layout: "fill",
   objectFit: "cover",
   objectPosition: "left top",

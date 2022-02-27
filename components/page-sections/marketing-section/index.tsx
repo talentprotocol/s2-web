@@ -5,6 +5,7 @@ import { MarketingSection as COPY } from "copy/homepage";
 import {
   ContentContainer,
   ImageContainer,
+  ImageRelativeContainer,
   StyledImage,
 } from "./styled";
 
@@ -13,7 +14,13 @@ const MarketingSection = () => (
     <HeroCopy title={COPY.title} description={COPY.description}>
       <ContentContainer>
         <ImageContainer>
-          <StyledImage src={discoverImage} alt="discover mvp" />
+          <ImageRelativeContainer>
+            <StyledImage
+              src={discoverImage}
+              alt="discover mvp"
+              priority
+            />
+          </ImageRelativeContainer>
         </ImageContainer>
       </ContentContainer>
     </HeroCopy>
