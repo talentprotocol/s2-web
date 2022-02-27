@@ -1,7 +1,7 @@
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import { WelcomeSection as COPY } from "copy/homepage";
-import Button from "atomic/_atom/button";
+import ButtonLink from "atomic/_atom/button-link";
 import rewardsImage from "atomic/_static/images/rewards.png";
 import {
   ContentContainer,
@@ -17,7 +17,7 @@ const WelcomeSection = () => (
       description={COPY.description}
     />
     <SectionFooter>
-      <Button content={COPY.footer.button} />
+      <ButtonLink content={COPY.footer.button} />
     </SectionFooter>
     <ContentContainer>
       <StyledImage src={rewardsImage} alt="talent protocol profile" />

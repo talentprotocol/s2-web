@@ -66,6 +66,9 @@ export const CommunitySection = {
   title: "A community, not a company.",
   description:
     "We're incorporated as a non-profit, building in public with our community, and on a path to progressive decentralization. Our code is open-source and our platform free to use.",
+  footer: {
+    button: "Join us on Discord",
+  },
 };
 
 export const ProfileSection = {

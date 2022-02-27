@@ -3,7 +3,7 @@ import HeroCopy from "../../hero-copy";
 import Slider from "../../slider";
 import { LandingSection as COPY } from "copy/homepage";
 import TextColorizer from "atomic/_atom/text-colorizer";
-import Button from "atomic/_atom/button";
+import ButtonLink from "atomic/_atom/button-link";
 import { slidesData } from "./slides-data";
 import {
   FocusedTitle,
@@ -21,7 +21,7 @@ const LandingSection = () => (
         <SectionFooterCopy>
           <TextColorizer content={COPY.footer.label} />
         </SectionFooterCopy>
-        <Button content={COPY.footer.button} />
+        <ButtonLink content={COPY.footer.button} />
       </SectionFooter>
     </HeroCopy>
     <Slider slidesData={slidesData} />
