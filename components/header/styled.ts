@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS } from "../../atomic/_static/color-palette";
+import { COLORS } from "atomic/_static/color-palette";
 
 export const HeaderContainer = styled.header`
   width: 100%;

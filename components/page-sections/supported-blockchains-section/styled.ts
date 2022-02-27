@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { fontDefault } from "../../../atomic/_static/typography";
-import { COLORS } from "../../../atomic/_static/color-palette";
+import { fontDefault } from "atomic/_static/typography";
+import { COLORS } from "atomic/_static/color-palette";
 
 export const FooterLabel = styled.h3`
   margin: 30px 0 0;

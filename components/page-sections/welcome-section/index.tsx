@@ -1,10 +1,13 @@
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import { WelcomeSection as COPY } from "copy/homepage";
-import { SectionFooter } from "./styled";
-import Button from "../../../atomic/_atom/button";
-import { ContentContainer, StyledImage } from "./styled";
+import Button from "atomic/_atom/button";
 import rewardsImage from "atomic/_static/images/rewards.png";
+import {
+  ContentContainer,
+  StyledImage,
+  SectionFooter,
+} from "./styled";
 
 const WelcomeSection = () => (
   <Hero>
