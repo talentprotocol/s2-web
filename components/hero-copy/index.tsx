@@ -44,7 +44,7 @@ const HeroCopy = ({
           <Title content={title} />
         </TitleContainer>
       ),
-    [title]
+    [title, subTitle]
   );
   const memoizedDescription = useMemo(
     () =>
@@ -53,7 +53,7 @@ const HeroCopy = ({
           <Description content={description} />
         </DescriptionContainer>
       ),
-    [description]
+    [description, title]
   );
   return (
     <Container>
