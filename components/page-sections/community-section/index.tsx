@@ -19,7 +19,7 @@ const CommunitySection = () => (
       description={COPY.description}
     />
     <ContentContainer>
-      <StyledImage src={profileImage} alt="talent protocol profile" />
+      <StyledImage src={profileImage} alt="community" />
     </ContentContainer>
     <JoinDiscordContainer>
       <ButtonLink content={COPY.footer.button}>

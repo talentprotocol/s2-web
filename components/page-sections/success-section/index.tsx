@@ -8,10 +8,7 @@ const SuccessSection = () => (
   <Hero>
     <HeroCopy title={COPY.title} description={COPY.description} />
     <ContentContainer>
-      <StyledImage
-        src={notificationsImage}
-        alt="talent protocol profile"
-      />
+      <StyledImage src={notificationsImage} alt="notifications" />
     </ContentContainer>
   </Hero>
 );
