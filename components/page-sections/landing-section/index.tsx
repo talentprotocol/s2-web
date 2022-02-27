@@ -23,8 +23,8 @@ const LandingSection = () => (
         </SectionFooterCopy>
         <ButtonLink content={COPY.footer.button} />
       </SectionFooter>
+      <Slider slidesData={slidesData} />
     </HeroCopy>
-    <Slider slidesData={slidesData} />
   </Hero>
 );
 

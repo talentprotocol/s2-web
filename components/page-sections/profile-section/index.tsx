@@ -6,13 +6,14 @@ import { SectionFooter } from "./styled";
 
 const ProfileSection = () => (
   <Hero>
-    <HeroCopy title={COPY.title} description={COPY.description} />
-    <SectionFooter>
-      <ButtonLink
-        content={COPY.footer.button.content}
-        type={COPY.footer.button.type}
-      />
-    </SectionFooter>
+    <HeroCopy title={COPY.title} description={COPY.description}>
+      <SectionFooter>
+        <ButtonLink
+          content={COPY.footer.button.content}
+          type={COPY.footer.button.type}
+        />
+      </SectionFooter>
+    </HeroCopy>
   </Hero>
 );
 

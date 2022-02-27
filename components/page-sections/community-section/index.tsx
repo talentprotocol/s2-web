@@ -17,15 +17,16 @@ const CommunitySection = () => (
       title={COPY.title}
       subTitle={COPY.subTitle}
       description={COPY.description}
-    />
-    <ContentContainer>
-      <StyledImage src={profileImage} alt="community" />
-    </ContentContainer>
-    <JoinDiscordContainer>
-      <ButtonLink content={COPY.footer.button}>
-        <DiscordIcon src={discordLogo} alt="discord" />
-      </ButtonLink>
-    </JoinDiscordContainer>
+    >
+      <ContentContainer>
+        <StyledImage src={profileImage} alt="community" />
+      </ContentContainer>
+      <JoinDiscordContainer>
+        <ButtonLink content={COPY.footer.button}>
+          <DiscordIcon src={discordLogo} alt="discord" />
+        </ButtonLink>
+      </JoinDiscordContainer>
+    </HeroCopy>
   </Hero>
 );
 

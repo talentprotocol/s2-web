@@ -15,13 +15,14 @@ const WelcomeSection = () => (
       title={COPY.title}
       subTitle={COPY.subTitle}
       description={COPY.description}
-    />
-    <SectionFooter>
-      <ButtonLink content={COPY.footer.button} />
-    </SectionFooter>
-    <ContentContainer>
-      <StyledImage src={rewardsImage} alt="rewards" />
-    </ContentContainer>
+    >
+      <SectionFooter>
+        <ButtonLink content={COPY.footer.button} />
+      </SectionFooter>
+      <ContentContainer>
+        <StyledImage src={rewardsImage} alt="rewards" />
+      </ContentContainer>
+    </HeroCopy>
   </Hero>
 );
 

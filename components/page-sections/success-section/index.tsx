@@ -6,10 +6,11 @@ import { ContentContainer, StyledImage } from "./styled";
 
 const SuccessSection = () => (
   <Hero>
-    <HeroCopy title={COPY.title} description={COPY.description} />
-    <ContentContainer>
-      <StyledImage src={notificationsImage} alt="notifications" />
-    </ContentContainer>
+    <HeroCopy title={COPY.title} description={COPY.description}>
+      <ContentContainer>
+        <StyledImage src={notificationsImage} alt="notifications" />
+      </ContentContainer>
+    </HeroCopy>
   </Hero>
 );
 

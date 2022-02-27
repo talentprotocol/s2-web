@@ -5,8 +5,9 @@ import { FooterLabel } from "./styled";
 
 const SupportedBlockChainsSection = () => (
   <Hero>
-    <HeroCopy subTitle={COPY.subTitle} />
-    <FooterLabel>{COPY.footer.label}</FooterLabel>
+    <HeroCopy subTitle={COPY.subTitle}>
+      <FooterLabel>{COPY.footer.label}</FooterLabel>
+    </HeroCopy>
   </Hero>
 );
 
