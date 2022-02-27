@@ -13,6 +13,7 @@ interface Props {
   subTitle?: {
     content: string;
     type: SubTitleType;
+    isCentered?: boolean;
   };
   title?: string;
   description?: string;
@@ -28,7 +29,11 @@ const HeroCopy = ({
   const memoizedSubTitle = useMemo(
     () =>
       subTitle && (
-        <SubTitle type={subTitle.type} content={subTitle.content} />
+        <SubTitle
+          type={subTitle.type}
+          content={subTitle.content}
+          isCentered={subTitle.isCentered}
+        />
       ),
     [subTitle]
   );

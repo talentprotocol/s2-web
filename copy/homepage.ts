@@ -71,3 +71,14 @@ export const ProfileSection = {
   description:
     "Join +200 other talent that already launched a token and a global community of +20,000 supporters that can help onboard you to web3.",
 };
+
+export const SupportedBlockChainsSection = {
+  subTitle: {
+    content: "Supported Blockchains",
+    type: SubTitleType.PRIMARY,
+    isCentered: true,
+  },
+  footer: {
+    label: "More coming",
+  },
+};

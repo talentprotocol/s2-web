@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { Type } from "./types";
+import { StyledProps, Type } from "./types";
 import { COLORS } from "../../_static/color-palette";
 import { fontDefault } from "../../_static/typography";
 
-export const StyledSubTitle = styled.h3<{ type: Type }>`
+export const StyledSubTitle = styled.h3<StyledProps>`
   margin: 0;
   font-family: ${fontDefault};
   font-style: normal;
@@ -16,4 +16,5 @@ export const StyledSubTitle = styled.h3<{ type: Type }>`
     type === Type.PRIMARY
       ? `color: ${COLORS.GREY};`
       : `color: ${COLORS.PURPLE};`}
+  ${({ isCentered }) => isCentered && `text-align: center;`}
 `;

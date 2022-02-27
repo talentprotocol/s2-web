@@ -1,13 +1,10 @@
 import { StyledSubTitle } from "./styled";
-import { Type } from "./types";
+import { Props } from "./types";
 
-interface Props {
-  content: string;
-  type: Type;
-}
-
-const SubTitle = ({ content, type }: Props) => (
-  <StyledSubTitle type={type}>{content}</StyledSubTitle>
+const SubTitle = ({ content, type, isCentered }: Props) => (
+  <StyledSubTitle type={type} isCentered={isCentered}>
+    {content}
+  </StyledSubTitle>
 );
 
 export default SubTitle;
