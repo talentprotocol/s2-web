@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         isSidebarVisible={sidebarState.isSidebarVisible}
       />
     ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
   return (

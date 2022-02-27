@@ -15,7 +15,7 @@ interface Props {
 const Header = ({ setSidebarStatus, isSidebarVisible }: Props) => {
   const handleMenuClick = useCallback(() => {
     setSidebarStatus(!isSidebarVisible);
-  }, [isSidebarVisible]);
+  }, [isSidebarVisible, setSidebarStatus]);
   const memoizedLogo = useMemo(
     () => (
       <LogoArea>

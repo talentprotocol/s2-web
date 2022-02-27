@@ -18,12 +18,13 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
   useEffect(() => {
     document.body.style.position = "fixed";
     return () => {
-      console.log("here")
+      console.log("here");
       document.body.style.position = "relative";
     };
   }, [isSidebarVisible]);
   const hideSidebar = useCallback(() => {
     setSidebarStatus(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const memoizedAnchors = useMemo(
     () =>
@@ -32,7 +33,7 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
           <StyledLink>{link.name}</StyledLink>
         </LinkListItem>
       )),
-    [COPY.links]
+    []
   );
   return (
     <Container onClick={hideSidebar}>
