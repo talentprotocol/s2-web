@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { config } from "react-spring";
 import dynamic from "next/dynamic";
 import { Container } from "./styled";
-import { slidesData } from "./slides-data";
+import {Props} from "./types"
 
 const DynamicCarouselWithNoSSR = dynamic(
   // @ts-ignore
@@ -10,7 +10,7 @@ const DynamicCarouselWithNoSSR = dynamic(
   { ssr: false }
 );
 
-const Slider = () => {
+const Slider = ({slidesData}: Props) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = useMemo(
     () =>

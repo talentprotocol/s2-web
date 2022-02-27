@@ -1,6 +1,6 @@
 import Image from "next/image";
 import talentCard from "atomic/_static/images/talent-card.png";
-import { Card } from "./styled";
+import { Card } from "../../slider/styled";
 
 export const slidesData = [
   {

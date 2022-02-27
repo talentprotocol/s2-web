@@ -4,6 +4,7 @@ import Slider from "../../slider";
 import { LandingSection as COPY } from "copy/homepage";
 import TextColorizer from "atomic/_atom/text-colorizer";
 import Button from "atomic/_atom/button";
+import {slidesData} from "./slides-data";
 import {
   FocusedTitle,
   SectionFooter,
@@ -23,7 +24,7 @@ const LandingSection = () => (
         <Button content={COPY.footer.button} />
       </SectionFooter>
     </HeroCopy>
-    <Slider />
+    <Slider slidesData={slidesData}/>
   </Hero>
 );
 
