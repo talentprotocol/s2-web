@@ -4,6 +4,7 @@ import "normalize.css";
 import "@fontsource/plus-jakarta-sans";
 import GlobalStyles from "atomic/_static/global-styles";
 import Header from "components/header";
+import Footer from "components/footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const MemoizedGlobalStyles = useMemo(() => <GlobalStyles />, []);
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {MemoizedGlobalStyles}
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
