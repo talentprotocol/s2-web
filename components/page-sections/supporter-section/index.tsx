@@ -1,7 +1,7 @@
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import { SupporterSection as COPY } from "copy/homepage";
-import {slidesData} from "./slides-data";
+import { slidesData } from "./slides-data";
 import Slider from "../../slider";
 
 const SupporterSection = () => (
@@ -11,7 +11,7 @@ const SupporterSection = () => (
       subTitle={COPY.subTitle}
       description={COPY.description}
     />
-    <Slider slidesData={slidesData}/>
+    <Slider slidesData={slidesData} />
   </Hero>
 );
 
