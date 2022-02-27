@@ -1,14 +1,25 @@
 import styled from "styled-components";
 import { COLORS } from "../../_static/color-palette";
 import { fontDefault } from "../../_static/typography";
+import { Type } from "./types";
 
-export const StyledButton = styled.a`
-  padding: 12px 32px;
-  outline: none;
-  border: none;
+const buildButton = (type: Type) =>
+  type === Type.PRIMARY
+    ? `
   background: ${COLORS.PURPLE};
   color: ${COLORS.WHITE};
+  `
+    : `
+  background: ${COLORS.BLACK};
+  color: ${COLORS.PURPLE};
+  border: 1px solid ${COLORS.PURPLE};`;
+
+export const StyledButton = styled.a<{ type: Type }>`
+  border: none;
+  ${({ type }) => buildButton(type)}
   font-family: ${fontDefault};
+  padding: 12px 32px;
+  outline: none;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

@@ -1,19 +1,19 @@
-import { StyledButton, ChildrenContainer } from "./styled";
 import { useMemo } from "react";
+import { StyledButton, ChildrenContainer } from "./styled";
+import { Props, Type } from "./types";
 
-interface Props {
-  content: string;
-  children?: JSX.Element | JSX.Element[];
-}
-
-const ButtonLink = ({ content, children }: Props) => {
+const ButtonLink = ({
+  content,
+  children,
+  type = Type.PRIMARY,
+}: Props) => {
   const renderedChildren = useMemo(
     () =>
       children && <ChildrenContainer>{children}</ChildrenContainer>,
     [children]
   );
   return (
-    <StyledButton>
+    <StyledButton type={type}>
       {renderedChildren}
       {content}
     </StyledButton>

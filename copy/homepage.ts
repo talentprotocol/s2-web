@@ -1,4 +1,5 @@
 import { Type as SubTitleType } from "atomic/_atom/subTitle/types";
+import { Type as ButtonType } from "atomic/_atom/button-link/types";
 
 export const LandingSection = {
   subTitle: {
@@ -10,6 +11,17 @@ export const LandingSection = {
   footer: {
     label: "#grey#We’re still #white#in private #grey#beta",
     button: "Join Waitlist",
+  },
+};
+
+export const SupportedBlockChainsSection = {
+  subTitle: {
+    content: "Supported Blockchains",
+    type: SubTitleType.PRIMARY,
+    isCentered: true,
+  },
+  footer: {
+    label: "More coming",
   },
 };
 
@@ -76,15 +88,10 @@ export const ProfileSection = {
     "Create your web3-native profile. No crypto experience needed.",
   description:
     "Join +200 other talent that already launched a token and a global community of +20,000 supporters that can help onboard you to web3.",
-};
-
-export const SupportedBlockChainsSection = {
-  subTitle: {
-    content: "Supported Blockchains",
-    type: SubTitleType.PRIMARY,
-    isCentered: true,
-  },
   footer: {
-    label: "More coming",
+    button: {
+      content: "Join Waitlist",
+      type: ButtonType.SECONDARY,
+    },
   },
 };
