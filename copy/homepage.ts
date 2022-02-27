@@ -47,6 +47,9 @@ export const WelcomeSection = {
   title: "Your last chance to be an OG.",
   description:
     "Season 2 will bring NFTs, on-chain career goals, public profiles, and a new UI. Join the waitlist to access the $TAL token at a discounted price before token launch.",
+  footer: {
+    button: "Join Waitlist",
+  },
 };
 
 export const MarketingSection = {
