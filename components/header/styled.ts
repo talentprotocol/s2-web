@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "atomic/_static/color-palette";
+import { fontDefault } from "../../atomic/_static/typography";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -8,6 +9,10 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   padding: 22px 24px;
+
+  @media (min-width: 768px) {
+    height: 100px;
+  }
 `;
 
 export const LogoArea = styled.div`
@@ -15,8 +20,6 @@ export const LogoArea = styled.div`
 `;
 
 export const ActionArea = styled.div`
-  height: 20px;
-  width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,4 +52,35 @@ export const MobileMenu = styled.button`
     background: ${COLORS.WHITE};
     content: "";
   }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const LinkList = styled.ul`
+  display: flex;
+  align-items: center;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const LinkListItem = styled.li`
+  margin-left: 40px;
+`;
+
+export const StyledLink = styled.a`
+  display: block;
+  font-family: ${fontDefault};
+  color: ${COLORS.WHITE};
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 165%;
+  letter-spacing: 0.02em;
 `;
