@@ -19,10 +19,10 @@ const WelcomeSection = () => (
       <SectionFooter>
         <ButtonLink content={COPY.footer.button} />
       </SectionFooter>
-      <ContentContainer>
-        <StyledImage src={rewardsImage} alt="rewards" />
-      </ContentContainer>
     </HeroCopy>
+    <ContentContainer>
+      <StyledImage src={rewardsImage} alt="rewards" />
+    </ContentContainer>
   </Hero>
 );
 

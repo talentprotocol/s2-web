@@ -3,6 +3,7 @@ import {
   Container,
   TitleContainer,
   DescriptionContainer,
+  InfoContainer,
 } from "./styled";
 import { Type as SubTitleType } from "atomic/_atom/subTitle/types";
 import SubTitle from "atomic/_atom/subTitle";
@@ -57,10 +58,12 @@ const HeroCopy = ({
   );
   return (
     <Container>
-      {memoizedSubTitle}
-      {memoizedTitle}
-      {memoizedDescription}
-      {children}
+      <InfoContainer>
+        {memoizedSubTitle}
+        {memoizedTitle}
+        {memoizedDescription}
+        {children}
+      </InfoContainer>
     </Container>
   );
 };

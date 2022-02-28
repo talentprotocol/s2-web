@@ -10,14 +10,10 @@ const TalentSection = () => (
       title={COPY.title}
       subTitle={COPY.subTitle}
       description={COPY.description}
-    >
-      <ContentContainer>
-        <StyledImage
-          src={profileImage}
-          alt="talent protocol profile"
-        />
-      </ContentContainer>
-    </HeroCopy>
+    />
+    <ContentContainer>
+      <StyledImage src={profileImage} alt="talent protocol profile" />
+    </ContentContainer>
   </Hero>
 );
 

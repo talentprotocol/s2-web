@@ -10,7 +10,6 @@ export const FocusedTitle = styled.h1`
   font-size: 40px;
   line-height: 120%;
 `;
-
 export const SectionFooter = styled.div`
   padding-top: 68px;
   display: flex;

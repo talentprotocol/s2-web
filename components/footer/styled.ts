@@ -5,10 +5,32 @@ import { fontDefault } from "../../atomic/_static/typography";
 export const Container = styled.footer`
   margin: 100px 0 0;
   padding: 24px 24px;
+
+  @media (min-width: 768px) {
+    max-width: 1200px;
+    margin: auto;
+  }
 `;
 
 export const LineBreak = styled.hr`
   border-color: ${COLORS.DARK_GREY};
+`;
+
+export const ColumnContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    * {
+      flex-grow: 1;
+    }
+  }
+`;
+
+export const AlignmentContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const InfoContainer = styled.div`

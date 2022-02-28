@@ -18,15 +18,15 @@ const CommunitySection = () => (
       subTitle={COPY.subTitle}
       description={COPY.description}
     >
-      <ContentContainer>
-        <StyledImage src={profileImage} alt="community" />
-      </ContentContainer>
       <JoinDiscordContainer>
         <ButtonLink content={COPY.footer.button}>
           <DiscordIcon src={discordLogo} alt="discord" />
         </ButtonLink>
       </JoinDiscordContainer>
     </HeroCopy>
+    <ContentContainer>
+      <StyledImage src={profileImage} alt="community" />
+    </ContentContainer>
   </Hero>
 );
 

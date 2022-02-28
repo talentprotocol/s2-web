@@ -10,9 +10,8 @@ const SupporterSection = () => (
       title={COPY.title}
       subTitle={COPY.subTitle}
       description={COPY.description}
-    >
-      <Slider slidesData={slidesData} />
-    </HeroCopy>
+    />
+    <Slider slidesData={slidesData} />
   </Hero>
 );
 

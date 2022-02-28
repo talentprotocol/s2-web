@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useMediaQuery } from "utils/useMediaQuery";
 import { Page } from "atomic/_static/containers";
 import LandingSection from "components/page-sections/landing-section";
 import SupportedBlockChainsSection from "components/page-sections/supported-blockchains-section";
@@ -11,6 +12,7 @@ import CommunitySection from "components/page-sections/community-section";
 import ProfileSection from "components/page-sections/profile-section";
 
 const Home: NextPage = () => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <Page>
       <LandingSection />
@@ -21,7 +23,7 @@ const Home: NextPage = () => {
       <WelcomeSection />
       <MarketingSection />
       <CommunitySection />
-      <ProfileSection />
+      {isMobile && <ProfileSection />}
     </Page>
   );
 };

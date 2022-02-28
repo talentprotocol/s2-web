@@ -5,13 +5,18 @@ import { fontDefault } from "../../atomic/_static/typography";
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 64px;
-  position: absolute;
   display: flex;
   align-items: center;
   padding: 22px 24px;
 
   @media (min-width: 768px) {
     height: 100px;
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    padding: 0;
   }
 `;
 

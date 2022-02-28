@@ -3,6 +3,18 @@ import { COLORS } from "atomic/_static/color-palette";
 
 export const Container = styled.article`
   color: ${COLORS.WHITE};
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const InfoContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const TitleContainer = styled.div<{ hasMargin?: boolean }>`
