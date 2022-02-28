@@ -20,7 +20,7 @@ const TextColorizer = ({ content }: Props) => {
             color={
               COLORS[
                 element
-                  .replaceAll("#", "")
+                  .replace(/#/g, "")
                   .toUpperCase() as AvailableColors
               ]
             }
