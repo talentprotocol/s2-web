@@ -1,6 +1,21 @@
 import styled from "styled-components";
 import { fontDefault } from "atomic/_static/typography";
 
+export const RowContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
+export const SliderContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 export const FocusedTitle = styled.h1`
   margin: 0;
   padding: 16px 0 0;

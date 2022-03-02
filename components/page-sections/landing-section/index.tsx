@@ -7,24 +7,30 @@ import ButtonLink from "atomic/_atom/button-link";
 import { slidesData } from "./slides-data";
 import {
   FocusedTitle,
+  RowContainer,
+  SliderContainer,
   SectionFooter,
   SectionFooterCopy,
 } from "./styled";
 
 const LandingSection = () => (
   <Hero>
-    <HeroCopy subTitle={COPY.subTitle}>
-      <FocusedTitle>
-        <TextColorizer content={COPY.label} />
-      </FocusedTitle>
-      <SectionFooter>
-        <SectionFooterCopy>
-          <TextColorizer content={COPY.footer.label} />
-        </SectionFooterCopy>
-        <ButtonLink content={COPY.footer.button} />
-      </SectionFooter>
-    </HeroCopy>
-    <Slider slidesData={slidesData} />
+    <RowContainer>
+      <HeroCopy subTitle={COPY.subTitle}>
+        <FocusedTitle>
+          <TextColorizer content={COPY.label} />
+        </FocusedTitle>
+        <SectionFooter>
+          <SectionFooterCopy>
+            <TextColorizer content={COPY.footer.label} />
+          </SectionFooterCopy>
+          <ButtonLink content={COPY.footer.button} />
+        </SectionFooter>
+      </HeroCopy>
+      <SliderContainer>
+        <Slider slidesData={slidesData} />
+      </SliderContainer>
+    </RowContainer>
   </Hero>
 );
 

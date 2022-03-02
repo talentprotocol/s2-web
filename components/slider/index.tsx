@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { config } from "react-spring";
 import dynamic from "next/dynamic";
 import { Container } from "./styled";
@@ -10,8 +10,20 @@ const DynamicCarouselWithNoSSR = dynamic(
   { ssr: false }
 );
 
+const AUTO_SLIDE_INTERVAL = 2000;
+
 const Slider = ({ slidesData }: Props) => {
   const [activeSlide, setActiveSlide] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const target =
+        activeSlide === slidesData.length - 1 ? 0 : activeSlide + 1;
+      setActiveSlide(target);
+    }, AUTO_SLIDE_INTERVAL);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [activeSlide, setActiveSlide]);
   const slides = useMemo(
     () =>
       slidesData.map((element, index) => {
@@ -25,8 +37,8 @@ const Slider = ({ slidesData }: Props) => {
       <DynamicCarouselWithNoSSR
         slides={slides}
         goToSlide={activeSlide}
-        offsetRadius={1}
-        showNavigation={false}
+        offsetRadius={2}
+        showNavigation={true}
         animationConfig={config.stiff}
       />
     </Container>

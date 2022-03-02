@@ -18,7 +18,6 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
   useEffect(() => {
     document.body.style.position = "fixed";
     return () => {
-      console.log("here");
       document.body.style.position = "relative";
     };
   }, [isSidebarVisible]);
