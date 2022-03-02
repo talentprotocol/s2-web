@@ -23,7 +23,7 @@ const Slider = ({ slidesData }: Props) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [activeSlide, setActiveSlide]);
+  }, [activeSlide, setActiveSlide, slidesData.length]);
   const slides = useMemo(
     () =>
       slidesData.map((element, index) => {
