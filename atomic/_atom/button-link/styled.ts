@@ -13,7 +13,6 @@ const buildButton = (type: Type) =>
   &:hover {
     background-color: ${COLORS.LIGHT_PURPLE};
     transition: background-color 0.3s ease;
-    cursor: pointer;
   }
   `
     : `
@@ -26,7 +25,6 @@ const buildButton = (type: Type) =>
     background-color: ${COLORS.PURPLE};
     color: ${COLORS.WHITE};
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
   }`;
 
 export const StyledButton = styled.a<{ type: Type }>`
@@ -42,6 +40,7 @@ export const StyledButton = styled.a<{ type: Type }>`
   display: inline-flex;
   justify-content: center;
   text-decoration: none;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 100%;

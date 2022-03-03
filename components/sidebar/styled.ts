@@ -32,10 +32,7 @@ export const StyledLink = styled.a`
   font-size: 16px;
   line-height: 165%;
   text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;
 
 export const ActionArea = styled.div`

@@ -88,10 +88,10 @@ export const StyledLink = styled.a`
   font-size: 14px;
   line-height: 165%;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     color: ${COLORS.WHITE};
-    cursor: pointer;
     transition: color 0.3s ease;
   }
 `;
