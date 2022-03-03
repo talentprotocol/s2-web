@@ -16,9 +16,19 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
   }
   
-  .css-1fzpoyk {
+  .css-1fzpoyk:nth-child(3) {
     opacity: 1 !important;
     box-shadow: 0 0 12px ${COLORS.BLACK};
+  }
+
+  .css-1fzpoyk:nth-child(1) {
+    opacity: 0 !important;
+    transition: 0.5s;
+  }
+
+  .css-1fzpoyk:nth-child(5) {
+    opacity: 0 !important;
+    transition: 0.5s;
   }
 `;
 
