@@ -44,13 +44,11 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
           content={COPY.joinButton.content}
           type={COPY.joinButton.type}
           href={COPY.joinButton.href}
-          target="blank"
         />
         <ButtonLink
           content={COPY.signInButton.content}
           type={COPY.signInButton.type}
           href={COPY.signInButton.href}
-          target="blank"
         />
       </ActionArea>
     </Container>

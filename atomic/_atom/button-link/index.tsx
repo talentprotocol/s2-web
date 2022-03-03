@@ -6,7 +6,7 @@ const ButtonLink = ({
   content,
   href,
   children,
-  target,
+  target = "blank",
   type = Type.PRIMARY,
 }: Props) => {
   const renderedChildren = useMemo(

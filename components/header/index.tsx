@@ -56,7 +56,6 @@ const Header = ({ setSidebarStatus, isSidebarVisible }: Props) => {
               type={ButtonType.SECONDARY}
               content={COPY.button.text}
               href={COPY.button.href}
-              target="blank"
             />
           </LinkListItem>
         </LinkList>

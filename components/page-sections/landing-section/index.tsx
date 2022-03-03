@@ -27,7 +27,6 @@ const LandingSection = () => (
           <ButtonLink
             content={COPY.footer.button.text}
             href={COPY.footer.button.href}
-            target="blank"
           />
         </SectionFooter>
       </HeroCopy>
