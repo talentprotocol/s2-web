@@ -7,7 +7,12 @@ export const StyledDescription = styled.p`
   font-family: ${fontDefault};
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 165%;
+  font-size: 20px;
+  line-height: 140%;
   color: ${COLORS.LIGHT_GREY};
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 165%;
+  }
 `;

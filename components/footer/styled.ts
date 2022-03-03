@@ -87,7 +87,13 @@ export const StyledLink = styled.a`
   font-weight: normal;
   font-size: 14px;
   line-height: 165%;
-  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &:hover {
+    color: ${COLORS.WHITE};
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
 `;
 
 export const Copyright = styled.span`

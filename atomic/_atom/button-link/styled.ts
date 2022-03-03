@@ -6,15 +6,28 @@ import { Type } from "./types";
 const buildButton = (type: Type) =>
   type === Type.PRIMARY
     ? `
-  padding: 12px 32px;
+  padding: 12px 0px;
   background: ${COLORS.PURPLE};
   color: ${COLORS.WHITE};
+  
+  &:hover {
+    background-color: ${COLORS.LIGHT_PURPLE};
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
   `
     : `
-  padding: 11px 31px;
+  padding: 11px 0px;
   background: ${COLORS.BLACK};
   color: ${COLORS.PURPLE};
-  border: 1px solid ${COLORS.PURPLE};`;
+  border: 1px solid ${COLORS.PURPLE};
+  
+  &:hover {
+    background-color: ${COLORS.PURPLE};
+    color: ${COLORS.WHITE};
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }`;
 
 export const StyledButton = styled.a<{ type: Type }>`
   border: none;
@@ -22,12 +35,21 @@ export const StyledButton = styled.a<{ type: Type }>`
   font-family: ${fontDefault};
   outline: none;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 165%;
   border-radius: 4px;
   display: inline-flex;
   justify-content: center;
+  text-decoration: none;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 `;
 
 export const ChildrenContainer = styled.span`

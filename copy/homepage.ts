@@ -9,8 +9,11 @@ export const LandingSection = {
   label:
     "#white#The web3 #yellow#professional network #white#for high-potential #yellow#talent#white#.",
   footer: {
-    label: "#grey#We’re still #white#in private #grey#beta",
-    button: "Join Waitlist",
+    label: "#grey#We’re still in #white#private beta",
+    button: {
+      text: "Join Waitlist",
+      href: "https://talentprotocol.typeform.com/apply",
+    },
   },
 };
 
@@ -60,7 +63,10 @@ export const WelcomeSection = {
   description:
     "Season 2 will bring NFTs, on-chain career goals, public profiles, and a new UI. Join the waitlist to access the $TAL token at a discounted price before token launch.",
   footer: {
-    button: "Join Waitlist",
+    button: {
+      text: "Join Waitlist",
+      href: "https://talentprotocol.typeform.com/apply",
+    },
   },
 };
 
@@ -79,7 +85,10 @@ export const CommunitySection = {
   description:
     "We're incorporated as a non-profit, building in public with our community, and on a path to progressive decentralization. Our code is open-source and our platform free to use.",
   footer: {
-    button: "Join us on Discord",
+    button: {
+      text: "Join us on Discord",
+      href: "https://discord.com/invite/talentprotocol",
+    },
   },
 };
 
@@ -91,6 +100,7 @@ export const ProfileSection = {
   footer: {
     button: {
       content: "Join Waitlist",
+      href: "https://talentprotocol.typeform.com/apply",
       type: ButtonType.SECONDARY,
     },
   },

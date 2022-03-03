@@ -12,22 +12,24 @@ export const HeaderContainer = styled.header`
   @media (min-width: 768px) {
     height: 100px;
     margin: auto;
+    padding: 0px 40px;
   }
 
   @media (min-width: 1200px) {
     max-width: 1200px;
-    padding: 0;
   }
 `;
 
 export const LogoArea = styled.div`
   flex-grow: 1;
+  padding-top: 40px;
 `;
 
 export const ActionArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
 `;
 
 export const MobileMenu = styled.button`
@@ -82,10 +84,16 @@ export const LinkListItem = styled.li`
 export const StyledLink = styled.a`
   display: block;
   font-family: ${fontDefault};
-  color: ${COLORS.WHITE};
+  color: ${COLORS.LIGHT_GREY};
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 16px;
   line-height: 165%;
-  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &:hover {
+    color: ${COLORS.WHITE};
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
 `;

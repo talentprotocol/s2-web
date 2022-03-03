@@ -4,7 +4,9 @@ import { Props, Type } from "./types";
 
 const ButtonLink = ({
   content,
+  href,
   children,
+  target,
   type = Type.PRIMARY,
 }: Props) => {
   const renderedChildren = useMemo(
@@ -13,7 +15,7 @@ const ButtonLink = ({
     [children]
   );
   return (
-    <StyledButton type={type}>
+    <StyledButton type={type} href={href} target={target}>
       {renderedChildren}
       {content}
     </StyledButton>
