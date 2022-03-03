@@ -4,16 +4,8 @@ import Image from "next/image";
 export const RowContainer = styled.div`
   @media (min-width: 768px) {
     display: flex;
-    gap: 144px;
-    flex-direction: row-reverse;
+    gap: 132px;
   }
-`;
-
-export const SectionFooter = styled.div`
-  padding-top: 68px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 `;
 
 export const ContentContainer = styled.div`
@@ -21,4 +13,6 @@ export const ContentContainer = styled.div`
   flex-grow: 1;
 `;
 
-export const StyledImage = styled(Image)``;
+export const StyledImage = styled(Image)`
+  width: 100%;
+`;

@@ -7,7 +7,7 @@ export const Container = styled.article`
   @media (min-width: 768px) {
     display: flex;
     align-items: center;
-    max-width: 50%;
+    max-width: 468px;
   }
 `;
 

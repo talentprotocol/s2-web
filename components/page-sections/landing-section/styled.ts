@@ -4,6 +4,10 @@ import { fontDefault } from "atomic/_static/typography";
 export const RowContainer = styled.div`
   @media (min-width: 768px) {
     display: flex;
+
+    article {
+      max-width: 50%;
+    }
   }
 `;
 

@@ -10,13 +10,7 @@ export const RowContainer = styled.div`
 
 export const ContentContainer = styled.div`
   margin: 56px 0 0;
-
-  @media (min-width: 768px) {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-  }
+  flex-grow: 1;
 `;
 
 export const StyledImage = styled(Image)`

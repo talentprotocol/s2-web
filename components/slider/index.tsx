@@ -10,7 +10,7 @@ const DynamicCarouselWithNoSSR = dynamic(
   { ssr: false }
 );
 
-const AUTO_SLIDE_INTERVAL = 2000;
+const AUTO_SLIDE_INTERVAL = 3000;
 
 const Slider = ({ slidesData }: Props) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -37,9 +37,9 @@ const Slider = ({ slidesData }: Props) => {
       <DynamicCarouselWithNoSSR
         slides={slides}
         goToSlide={activeSlide}
-        offsetRadius={2}
+        offsetRadius={20}
         showNavigation={true}
-        animationConfig={config.stiff}
+        animationConfig={config.default}
       />
     </Container>
   );

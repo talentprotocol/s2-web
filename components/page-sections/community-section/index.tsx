@@ -1,7 +1,7 @@
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import { CommunitySection as COPY } from "copy/homepage";
-import profileImage from "atomic/_static/images/nft-card-02.png";
+import nftCard2 from "atomic/_static/images/nft-card-02.png";
 import ButtonLink from "atomic/_atom/button-link";
 import discordLogo from "atomic/_static/images/discord-logo-temp.svg";
 import {
@@ -25,7 +25,7 @@ const CommunitySection = () => (
       </JoinDiscordContainer>
     </HeroCopy>
     <ContentContainer>
-      <StyledImage src={profileImage} alt="community" />
+      <StyledImage src={nftCard2} alt="community" />
     </ContentContainer>
   </Hero>
 );
