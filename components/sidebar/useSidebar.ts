@@ -10,7 +10,7 @@ export const useSidebar = () => {
       setTimeout(() => {
         setSidebarStatus(false);
         setIsClosing(false);
-      }, 500);
+      }, 250);
     } else {
       setSidebarStatus(true);
       setIsClosing(false);

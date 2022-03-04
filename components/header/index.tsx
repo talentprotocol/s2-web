@@ -17,9 +17,10 @@ import {
 
 interface Props {
   toggleSidebar: () => void;
+  isSidebarVisible: boolean;
 }
 
-const Header = ({ toggleSidebar }: Props) => {
+const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const memoizedLogo = useMemo(
     () => (
@@ -35,7 +36,10 @@ const Header = ({ toggleSidebar }: Props) => {
     <HeaderContainer>
       {memoizedLogo}
       <ActionArea>
-        <MobileMenu onClick={toggleSidebar} />
+        <MobileMenu
+          onClick={toggleSidebar}
+          isSidebarVisible={isSidebarVisible}
+        />
         <LinkList>
           <LinkListItem>
             <StyledLink>{COPY.links[0].name}</StyledLink>

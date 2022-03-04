@@ -6,7 +6,7 @@ export const Container = styled.div<Props>`
   position: absolute;
   width: 800px;
   animation: move 18s infinite;
-  z-index: 10;
+  z-index: -20;
 
   @keyframes move {
     0% {

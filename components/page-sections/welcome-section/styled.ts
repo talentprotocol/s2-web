@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const RowContainer = styled.div`
+  z-index: 5;
   @media (min-width: 768px) {
     display: flex;
     gap: 144px;

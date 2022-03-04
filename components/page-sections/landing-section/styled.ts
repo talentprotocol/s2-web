@@ -12,6 +12,7 @@ export const RowContainer = styled.div`
 `;
 
 export const SliderContainer = styled.div`
+  padding: 0 24px;
   @media (min-width: 768px) {
     display: flex;
     flex-grow: 1;

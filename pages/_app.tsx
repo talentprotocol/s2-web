@@ -27,7 +27,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       {memoizedGlobalStyles}
       {sidebarState.isSidebarVisible && memoizedSidebar}
-      <Header toggleSidebar={sidebarState.toggleSidebar} />
+      <Header
+        toggleSidebar={sidebarState.toggleSidebar}
+        isSidebarVisible={sidebarState.isSidebarVisible}
+      />
       <Component {...pageProps} />
       <Footer />
     </>
