@@ -1,6 +1,7 @@
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import profileImage from "atomic/_static/images/profile.png";
+import { GradientType } from "atomic/_static/gradient/types";
 import { TalentSection as COPY } from "copy/homepage";
 import {
   RowContainer,
@@ -9,7 +10,7 @@ import {
 } from "./styled";
 
 const TalentSection = () => (
-  <Hero>
+  <Hero gradientType={GradientType.REVERSE_LEFT}>
     <RowContainer>
       <HeroCopy
         title={COPY.title}

@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { AppProps } from "next/app";
 import "normalize.css";
+import "animate.css";
 import "@fontsource/plus-jakarta-sans";
 import GlobalStyles from "atomic/_static/global-styles";
 import Header from "components/header";
@@ -14,21 +15,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   const memoizedSidebar = useMemo(
     () => (
       <Sidebar
-        setSidebarStatus={sidebarState.setSidebarStatus}
         isSidebarVisible={sidebarState.isSidebarVisible}
+        isClosing={sidebarState.isClosing}
+        toggleSidebar={sidebarState.toggleSidebar}
       />
     ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [sidebarState.isClosing]
   );
   return (
     <>
       {memoizedGlobalStyles}
       {sidebarState.isSidebarVisible && memoizedSidebar}
-      <Header
-        setSidebarStatus={sidebarState.setSidebarStatus}
-        isSidebarVisible={sidebarState.isSidebarVisible}
-      />
+      <Header toggleSidebar={sidebarState.toggleSidebar} />
       <Component {...pageProps} />
       <Footer />
     </>

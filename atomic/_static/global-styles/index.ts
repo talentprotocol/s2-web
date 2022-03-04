@@ -18,7 +18,6 @@ const GlobalStyles = createGlobalStyle`
   
   .css-1fzpoyk:nth-child(3) {
     opacity: 1 !important;
-    box-shadow: 0 0 12px ${COLORS.BLACK};
   }
 
   .css-1fzpoyk:nth-child(1) {

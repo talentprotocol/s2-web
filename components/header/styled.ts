@@ -3,13 +3,16 @@ import { COLORS } from "atomic/_static/color-palette";
 import { fontDefault } from "../../atomic/_static/typography";
 
 export const HeaderContainer = styled.header`
+  position: absolute;
   width: 100%;
   height: 64px;
   display: flex;
   align-items: center;
   padding: 22px 24px;
+  z-index: 3;
 
   @media (min-width: 768px) {
+    position: relative;
     height: 100px;
     margin: auto;
   }

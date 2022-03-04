@@ -2,6 +2,7 @@ import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import Slider from "../../slider";
 import { LandingSection as COPY } from "copy/homepage";
+import { GradientType } from "atomic/_static/gradient/types";
 import TextColorizer from "atomic/_atom/text-colorizer";
 import ButtonLink from "atomic/_atom/button-link";
 import { slidesData } from "./slides-data";
@@ -14,7 +15,7 @@ import {
 } from "./styled";
 
 const LandingSection = () => (
-  <Hero>
+  <Hero gradientType={GradientType.LEFT}>
     <RowContainer>
       <HeroCopy subTitle={COPY.subTitle}>
         <FocusedTitle>

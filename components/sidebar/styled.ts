@@ -6,12 +6,13 @@ export const Container = styled.section`
   position: fixed;
   z-index: 3;
   width: 100%;
-  height: calc(100% - 64px);
+  height: 100%;
   bottom: 0;
   background: ${COLORS.BLACK};
-  padding: 24px;
+  padding: 88px 24px;
   display: flex;
   flex-direction: column;
+  --animate-duration: 0.4s;
 `;
 
 export const LinkList = styled.ul`

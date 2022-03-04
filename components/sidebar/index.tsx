@@ -1,30 +1,33 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { SidebarCopy as COPY } from "copy/sidebar";
 import ButtonLink from "atomic/_atom/button-link";
 import {
+  ActionArea,
   Container,
   LinkList,
   LinkListItem,
   StyledLink,
-  ActionArea,
 } from "./styled";
+import Gradient from "atomic/_static/gradient";
+import { GradientType } from "atomic/_static/gradient/types";
 
 interface Props {
-  setSidebarStatus: (A: boolean) => void;
   isSidebarVisible: boolean;
+  isClosing: boolean;
+  toggleSidebar: () => void;
 }
 
-const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
+const Sidebar = ({
+  isSidebarVisible,
+  isClosing,
+  toggleSidebar,
+}: Props) => {
   useEffect(() => {
     document.body.style.position = "fixed";
     return () => {
       document.body.style.position = "relative";
     };
   }, [isSidebarVisible]);
-  const hideSidebar = useCallback(() => {
-    setSidebarStatus(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   const memoizedAnchors = useMemo(
     () =>
       COPY.links.map((link) => (
@@ -35,7 +38,13 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
     []
   );
   return (
-    <Container onClick={hideSidebar}>
+    <Container
+      className={`animate__animated ${
+        !isClosing ? "animate__fadeInLeft" : "animate__fadeOutLeft"
+      }`}
+      onClick={toggleSidebar}
+    >
+      <Gradient type={GradientType.BOTTOM} />
       <LinkList>{memoizedAnchors}</LinkList>
       <ActionArea>
         <ButtonLink

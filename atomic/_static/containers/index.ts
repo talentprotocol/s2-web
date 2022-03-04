@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const Page = styled.div`
-  padding: 64px 0 0;
+  padding: 128px 0 0;
 `;

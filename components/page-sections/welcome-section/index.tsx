@@ -3,6 +3,7 @@ import HeroCopy from "../../hero-copy";
 import { WelcomeSection as COPY } from "copy/homepage";
 import ButtonLink from "atomic/_atom/button-link";
 import rewardsImage from "atomic/_static/images/rewards.png";
+import { GradientType } from "atomic/_static/gradient/types";
 import {
   RowContainer,
   ContentContainer,
@@ -11,7 +12,7 @@ import {
 } from "./styled";
 
 const WelcomeSection = () => (
-  <Hero>
+  <Hero gradientType={GradientType.BOTTOM}>
     <RowContainer>
       <HeroCopy
         title={COPY.title}

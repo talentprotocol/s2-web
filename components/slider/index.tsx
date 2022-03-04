@@ -15,13 +15,13 @@ const AUTO_SLIDE_INTERVAL = 3000;
 const Slider = ({ slidesData }: Props) => {
   const [activeSlide, setActiveSlide] = useState(0);
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const timeoutId = setTimeout(() => {
       const target =
         activeSlide === slidesData.length - 1 ? 0 : activeSlide + 1;
       setActiveSlide(target);
     }, AUTO_SLIDE_INTERVAL);
     return () => {
-      clearInterval(intervalId);
+      clearTimeout(timeoutId);
     };
   }, [activeSlide, setActiveSlide, slidesData.length]);
   const slides = useMemo(
@@ -38,7 +38,7 @@ const Slider = ({ slidesData }: Props) => {
         slides={slides}
         goToSlide={activeSlide}
         offsetRadius={20}
-        showNavigation={true}
+        showNavigation={false}
         animationConfig={config.default}
       />
     </Container>

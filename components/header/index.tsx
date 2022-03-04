@@ -16,15 +16,11 @@ import {
 } from "./styled";
 
 interface Props {
-  setSidebarStatus: (A: boolean) => void;
-  isSidebarVisible: boolean;
+  toggleSidebar: () => void;
 }
 
-const Header = ({ setSidebarStatus, isSidebarVisible }: Props) => {
+const Header = ({ toggleSidebar }: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const handleMenuClick = useCallback(() => {
-    setSidebarStatus(!isSidebarVisible);
-  }, [isSidebarVisible, setSidebarStatus]);
   const memoizedLogo = useMemo(
     () => (
       <LogoArea>
@@ -39,7 +35,7 @@ const Header = ({ setSidebarStatus, isSidebarVisible }: Props) => {
     <HeaderContainer>
       {memoizedLogo}
       <ActionArea>
-        <MobileMenu onClick={handleMenuClick} />
+        <MobileMenu onClick={toggleSidebar} />
         <LinkList>
           <LinkListItem>
             <StyledLink>{COPY.links[0].name}</StyledLink>
