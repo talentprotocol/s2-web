@@ -27,7 +27,9 @@ const Footer = () => {
     () =>
       COPY.projectList.links.map((link) => (
         <LinkListItem key={link.name}>
-          <StyledLink>{link.name}</StyledLink>
+          <StyledLink href={link.href} target="blank">
+            {link.name}
+          </StyledLink>
         </LinkListItem>
       )),
     []
@@ -36,7 +38,9 @@ const Footer = () => {
     () =>
       COPY.helpList.links.map((link) => (
         <LinkListItem key={link.name}>
-          <StyledLink>{link.name}</StyledLink>
+          <StyledLink href={link.href} target="blank">
+            {link.name}
+          </StyledLink>
         </LinkListItem>
       )),
     []

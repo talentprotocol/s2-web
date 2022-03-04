@@ -8,7 +8,7 @@ export const StyledSubTitle = styled.h3<StyledProps>`
   font-family: ${fontDefault};
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 185%;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -17,4 +17,7 @@ export const StyledSubTitle = styled.h3<StyledProps>`
       ? `color: ${COLORS.GREY};`
       : `color: ${COLORS.PURPLE};`}
   ${({ isCentered }) => isCentered && `text-align: center;`}
+  @media(max-width: 768px) {
+    font-size: 12px;
+  }
 `;

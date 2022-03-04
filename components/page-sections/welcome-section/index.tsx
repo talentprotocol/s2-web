@@ -19,7 +19,10 @@ const WelcomeSection = () => (
         description={COPY.description}
       >
         <SectionFooter>
-          <ButtonLink content={COPY.footer.button} />
+          <ButtonLink
+            content={COPY.footer.button.text}
+            href={COPY.footer.button.href}
+          />
         </SectionFooter>
       </HeroCopy>
       <ContentContainer>

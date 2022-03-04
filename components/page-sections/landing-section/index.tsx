@@ -24,7 +24,10 @@ const LandingSection = () => (
           <SectionFooterCopy>
             <TextColorizer content={COPY.footer.label} />
           </SectionFooterCopy>
-          <ButtonLink content={COPY.footer.button} />
+          <ButtonLink
+            content={COPY.footer.button.text}
+            href={COPY.footer.button.href}
+          />
         </SectionFooter>
       </HeroCopy>
       <SliderContainer>

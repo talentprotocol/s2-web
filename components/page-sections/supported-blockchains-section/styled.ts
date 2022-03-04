@@ -9,6 +9,10 @@ export const HorizontalContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 64px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterLabel = styled.h3`

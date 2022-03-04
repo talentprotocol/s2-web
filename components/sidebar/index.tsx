@@ -29,7 +29,9 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
     () =>
       COPY.links.map((link) => (
         <LinkListItem key={link.name}>
-          <StyledLink>{link.name}</StyledLink>
+          <StyledLink href={link.href} target="blank">
+            {link.name}
+          </StyledLink>
         </LinkListItem>
       )),
     []
@@ -41,10 +43,12 @@ const Sidebar = ({ setSidebarStatus, isSidebarVisible }: Props) => {
         <ButtonLink
           content={COPY.joinButton.content}
           type={COPY.joinButton.type}
+          href={COPY.joinButton.href}
         />
         <ButtonLink
           content={COPY.signInButton.content}
           type={COPY.signInButton.type}
+          href={COPY.signInButton.href}
         />
       </ActionArea>
     </Container>

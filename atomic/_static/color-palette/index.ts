@@ -5,7 +5,8 @@ export type AvailableColors =
   | "LIGHT_GREY"
   | "DARK_GREY"
   | "PURPLE"
-  | "YELLOW";
+  | "YELLOW"
+  | "LIGHT_PURPLE";
 
 export const COLORS: Record<AvailableColors, string> = {
   BLACK: "#040404",
@@ -15,4 +16,5 @@ export const COLORS: Record<AvailableColors, string> = {
   LIGHT_GREY: "#aaadb3",
   PURPLE: "#7a55ff",
   YELLOW: "#fcfe6b",
+  LIGHT_PURPLE: "#9577ff",
 };

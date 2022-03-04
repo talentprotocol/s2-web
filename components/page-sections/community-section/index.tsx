@@ -19,7 +19,10 @@ const CommunitySection = () => (
       description={COPY.description}
     >
       <JoinDiscordContainer>
-        <ButtonLink content={COPY.footer.button}>
+        <ButtonLink
+          content={COPY.footer.button.text}
+          href={COPY.footer.button.href}
+        >
           <DiscordIcon src={discordLogo} alt="discord" />
         </ButtonLink>
       </JoinDiscordContainer>

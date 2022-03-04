@@ -5,10 +5,13 @@ import { fontDefault } from "../../_static/typography";
 export const StyledTitle = styled.h1`
   margin: 0;
   font-family: ${fontDefault};
-  letter-spacing: 0.2em;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 32px;
   line-height: 120%;
   color: ${COLORS.WHITE};
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;

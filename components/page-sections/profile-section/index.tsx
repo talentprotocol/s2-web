@@ -11,6 +11,7 @@ const ProfileSection = () => (
         <ButtonLink
           content={COPY.footer.button.content}
           type={COPY.footer.button.type}
+          href={COPY.footer.button.href}
         />
       </SectionFooter>
     </HeroCopy>
