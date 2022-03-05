@@ -42,7 +42,7 @@ const Sidebar = ({
   return (
     <Container
       className={`animate__animated ${
-        !isClosing ? "animate__fadeInLeft" : "animate__fadeOutLeft"
+        !isClosing ? "animate__fadeInLeft" : "animate__fadeOutLeftBig"
       }`}
       onClick={toggleSidebar}
     >

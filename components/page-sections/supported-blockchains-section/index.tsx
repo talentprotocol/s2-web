@@ -6,6 +6,7 @@ import { SupportedBlockChainsSection as COPY } from "copy/homepage";
 import {
   HorizontalContainer,
   StyledImage,
+  ImageContainer,
   FooterLabel,
 } from "./styled";
 
@@ -13,8 +14,12 @@ const SupportedBlockChainsSection = () => (
   <Hero className="animate__animated animate__fadeIn">
     <HeroCopy subTitle={COPY.subTitle}>
       <HorizontalContainer>
-        <StyledImage src={celoLogo} alt="celo" />
-        <StyledImage src={polygonLogo} alt="polygon" />
+        <ImageContainer width="148px">
+          <StyledImage src={celoLogo} alt="celo" />
+        </ImageContainer>
+        <ImageContainer width="248px">
+          <StyledImage src={polygonLogo} alt="polygon" />
+        </ImageContainer>
         <FooterLabel>{COPY.footer.label}</FooterLabel>
       </HorizontalContainer>
     </HeroCopy>

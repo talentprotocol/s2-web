@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { COLORS } from "atomic/_static/color-palette";
-import { fontDefault } from "../../atomic/_static/typography";
+import { fontDefault } from "atomic/_static/typography";
 
 export const Container = styled.footer`
-  margin: 100px 0 0;
+  margin: 64px 0 0;
   padding: 24px 24px;
 
   @media (min-width: 768px) {
@@ -28,6 +29,7 @@ export const ColumnContainer = styled.div`
 `;
 
 export const AlignmentContainer = styled.div`
+  margin-bottom: 40px;
   @media (min-width: 768px) {
     display: flex;
   }
@@ -55,7 +57,6 @@ export const Label = styled.span`
 export const ListsContainer = styled.section`
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
 `;
 
 export const ListTitle = styled.span`
@@ -108,7 +109,17 @@ export const Copyright = styled.span`
 `;
 
 export const LogosArea = styled.div`
-  margin-top: 24px;
+  margin: 32px 0 40px;
   font-family: ${fontDefault};
   color: ${COLORS.WHITE};
+  display: flex;
+  gap: 32px;
 `;
+
+export const ExternalLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StyledImage = styled(Image)``;

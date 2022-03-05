@@ -4,7 +4,7 @@ import { CommunitySection as COPY } from "copy/homepage";
 import { GradientType } from "atomic/_static/gradient/types";
 import nftCard2 from "atomic/_static/images/nft-card-02.png";
 import ButtonLink from "atomic/_atom/button-link";
-import discordLogo from "atomic/_static/images/discord-logo-temp.svg";
+import discordLogo from "atomic/_static/images/discord-white.svg";
 import {
   ContentContainer,
   JoinDiscordContainer,

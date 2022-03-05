@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
   }
-  
+
   .css-1fzpoyk:nth-child(3) {
     opacity: 1 !important;
   }

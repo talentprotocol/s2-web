@@ -17,7 +17,7 @@ const buildButton = (type: Type) =>
   `
     : `
   padding: 11px 0px;
-  background: ${COLORS.BLACK};
+  background: transparent;
   color: ${COLORS.PURPLE};
   border: 1px solid ${COLORS.PURPLE};
   

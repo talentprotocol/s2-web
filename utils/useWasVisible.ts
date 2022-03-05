@@ -19,5 +19,5 @@ export const useWasVisible = (
       element?.current && observer.unobserve(element.current);
     };
   }, [element?.current]);
-  return true;
+  return wasVisible;
 };

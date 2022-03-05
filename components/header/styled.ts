@@ -29,14 +29,12 @@ export const HeaderContainer = styled.header`
 
 export const LogoArea = styled.div`
   flex-grow: 1;
-  padding-top: 40px;
 `;
 
 export const ActionArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
 `;
 
 export const MobileMenu = styled.button<MobileMenuProps>`
