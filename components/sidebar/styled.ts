@@ -16,23 +16,24 @@ export const Container = styled.section`
 `;
 
 export const LinkList = styled.ul`
-  margin: 36px 0 0;
+  margin-top: 8px;
   list-style-type: none;
   padding: 0;
 `;
 
 export const LinkListItem = styled.li`
-  margin-top: 24px;
+  margin-top: 32px;
 `;
 
 export const StyledLink = styled.a`
   font-family: ${fontDefault};
   color: ${COLORS.WHITE};
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 16px;
   line-height: 165%;
-  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 export const ActionArea = styled.div`

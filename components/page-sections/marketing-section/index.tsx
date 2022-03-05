@@ -3,6 +3,7 @@ import HeroCopy from "../../hero-copy";
 import discoverImage from "atomic/_static/images/discover.png";
 import { MarketingSection as COPY } from "copy/homepage";
 import {
+  Column,
   ContentContainer,
   ImageContainer,
   ImageRelativeContainer,
@@ -11,7 +12,12 @@ import {
 
 const MarketingSection = () => (
   <Hero>
-    <HeroCopy title={COPY.title} description={COPY.description}>
+    <Column>
+      <HeroCopy
+        title={COPY.title}
+        description={COPY.description}
+        isStretched
+      />
       <ContentContainer>
         <ImageContainer>
           <ImageRelativeContainer>
@@ -23,7 +29,7 @@ const MarketingSection = () => (
           </ImageRelativeContainer>
         </ImageContainer>
       </ContentContainer>
-    </HeroCopy>
+    </Column>
   </Hero>
 );
 

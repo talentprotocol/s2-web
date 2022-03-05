@@ -32,7 +32,9 @@ const Sidebar = ({
     () =>
       COPY.links.map((link) => (
         <LinkListItem key={link.name}>
-          <StyledLink>{link.name}</StyledLink>
+          <StyledLink href={link.href} target="blank">
+            {link.name}
+          </StyledLink>
         </LinkListItem>
       )),
     []
@@ -44,16 +46,18 @@ const Sidebar = ({
       }`}
       onClick={toggleSidebar}
     >
-      <Gradient type={GradientType.BOTTOM} />
+      <Gradient type={GradientType.DEFAULT} />
       <LinkList>{memoizedAnchors}</LinkList>
       <ActionArea>
         <ButtonLink
           content={COPY.joinButton.content}
           type={COPY.joinButton.type}
+          href={COPY.joinButton.href}
         />
         <ButtonLink
           content={COPY.signInButton.content}
           type={COPY.signInButton.type}
+          href={COPY.signInButton.href}
         />
       </ActionArea>
     </Container>

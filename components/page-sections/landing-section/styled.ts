@@ -27,8 +27,12 @@ export const FocusedTitle = styled.h1`
   font-family: ${fontDefault};
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 64px;
   line-height: 120%;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 export const SectionFooter = styled.div`
   padding-top: 68px;

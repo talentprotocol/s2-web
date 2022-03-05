@@ -13,14 +13,17 @@ import {
 } from "./styled";
 
 const CommunitySection = () => (
-  <Hero gradientType={GradientType.BOTTOM}>
+  <Hero gradientType={GradientType.RIGHT}>
     <HeroCopy
       title={COPY.title}
       subTitle={COPY.subTitle}
       description={COPY.description}
     >
       <JoinDiscordContainer>
-        <ButtonLink content={COPY.footer.button}>
+        <ButtonLink
+          content={COPY.footer.button.text}
+          href={COPY.footer.button.href}
+        >
           <DiscordIcon src={discordLogo} alt="discord" />
         </ButtonLink>
       </JoinDiscordContainer>

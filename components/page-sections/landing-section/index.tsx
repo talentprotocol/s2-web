@@ -15,7 +15,7 @@ import {
 } from "./styled";
 
 const LandingSection = () => (
-  <Hero gradientType={GradientType.LEFT}>
+  <Hero gradientType={GradientType.DEFAULT}>
     <RowContainer>
       <HeroCopy subTitle={COPY.subTitle}>
         <FocusedTitle>
@@ -25,7 +25,10 @@ const LandingSection = () => (
           <SectionFooterCopy>
             <TextColorizer content={COPY.footer.label} />
           </SectionFooterCopy>
-          <ButtonLink content={COPY.footer.button} />
+          <ButtonLink
+            content={COPY.footer.button.text}
+            href={COPY.footer.button.href}
+          />
         </SectionFooter>
       </HeroCopy>
       <SliderContainer>

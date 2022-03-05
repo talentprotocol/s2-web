@@ -10,7 +10,7 @@ import {
 } from "./styled";
 
 const TalentSection = () => (
-  <Hero gradientType={GradientType.REVERSE_LEFT}>
+  <Hero gradientType={GradientType.RIGHT}>
     <RowContainer>
       <HeroCopy
         title={COPY.title}

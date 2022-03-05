@@ -42,15 +42,20 @@ const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
         />
         <LinkList>
           <LinkListItem>
-            <StyledLink>{COPY.links[0].name}</StyledLink>
+            <StyledLink href={COPY.links[0].href} target="blank">
+              {COPY.links[0].name}
+            </StyledLink>
           </LinkListItem>
           <LinkListItem>
-            <StyledLink>{COPY.links[1].name}</StyledLink>
+            <StyledLink href={COPY.links[1].href} target="blank">
+              {COPY.links[1].name}
+            </StyledLink>
           </LinkListItem>
           <LinkListItem>
             <ButtonLink
               type={ButtonType.SECONDARY}
-              content={COPY.button}
+              content={COPY.button.text}
+              href={COPY.button.href}
             />
           </LinkListItem>
         </LinkList>

@@ -12,7 +12,7 @@ import {
 } from "./styled";
 
 const WelcomeSection = () => (
-  <Hero gradientType={GradientType.BOTTOM}>
+  <Hero gradientType={GradientType.DEFAULT}>
     <RowContainer>
       <HeroCopy
         title={COPY.title}
@@ -20,7 +20,10 @@ const WelcomeSection = () => (
         description={COPY.description}
       >
         <SectionFooter>
-          <ButtonLink content={COPY.footer.button} />
+          <ButtonLink
+            content={COPY.footer.button.text}
+            href={COPY.footer.button.href}
+          />
         </SectionFooter>
       </HeroCopy>
       <ContentContainer>

@@ -1,10 +1,7 @@
 export enum GradientType {
-  LEFT,
-  REVERSE_LEFT,
-  RIGHT,
   HIDDEN,
-  CENTER,
-  BOTTOM,
+  RIGHT = "RIGHT",
+  DEFAULT = "DEFAULT",
 }
 
 export interface Props {
