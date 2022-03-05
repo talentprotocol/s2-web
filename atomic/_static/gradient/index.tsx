@@ -9,7 +9,7 @@ const Gradient = ({ type }: Props) =>
   ) : (
     <Container type={type}>
       <RelativeContainer>
-        <StyledImage src={gradientImage} alt="gradient" />
+        <StyledImage priority src={gradientImage} alt="gradient" />
       </RelativeContainer>
     </Container>
   );

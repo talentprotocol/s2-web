@@ -10,11 +10,11 @@ import {
 } from "./styled";
 
 const SupportedBlockChainsSection = () => (
-  <Hero>
+  <Hero className="animate__animated animate__fadeIn">
     <HeroCopy subTitle={COPY.subTitle}>
       <HorizontalContainer>
-        <StyledImage src={celoLogo} />
-        <StyledImage src={polygonLogo} />
+        <StyledImage src={celoLogo} alt="celo" />
+        <StyledImage src={polygonLogo} alt="polygon" />
         <FooterLabel>{COPY.footer.label}</FooterLabel>
       </HorizontalContainer>
     </HeroCopy>

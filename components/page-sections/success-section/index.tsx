@@ -9,7 +9,7 @@ import {
 } from "./styled";
 
 const SuccessSection = () => (
-  <Hero>
+  <Hero className="animate__animated animate__fadeInUp">
     <RowContainer>
       <HeroCopy title={COPY.title} description={COPY.description} />
       <ContentContainer>

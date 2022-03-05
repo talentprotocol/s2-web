@@ -9,22 +9,27 @@ import {
   StyledImage,
 } from "./styled";
 
-const TalentSection = () => (
-  <Hero gradientType={GradientType.RIGHT}>
-    <RowContainer>
-      <HeroCopy
-        title={COPY.title}
-        subTitle={COPY.subTitle}
-        description={COPY.description}
-      />
-      <ContentContainer>
-        <StyledImage
-          src={profileImage}
-          alt="talent protocol profile"
+const TalentSection = () => {
+  return (
+    <Hero
+      gradientType={GradientType.RIGHT}
+      className="animate__animated animate__fadeInRight"
+    >
+      <RowContainer>
+        <HeroCopy
+          title={COPY.title}
+          subTitle={COPY.subTitle}
+          description={COPY.description}
         />
-      </ContentContainer>
-    </RowContainer>
-  </Hero>
-);
+        <ContentContainer>
+          <StyledImage
+            src={profileImage}
+            alt="talent protocol profile"
+          />
+        </ContentContainer>
+      </RowContainer>
+    </Hero>
+  );
+};
 
 export default TalentSection;

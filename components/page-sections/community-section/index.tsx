@@ -13,7 +13,10 @@ import {
 } from "./styled";
 
 const CommunitySection = () => (
-  <Hero gradientType={GradientType.RIGHT}>
+  <Hero
+    gradientType={GradientType.RIGHT}
+    className="animate__animated animate__fadeInRight"
+  >
     <HeroCopy
       title={COPY.title}
       subTitle={COPY.subTitle}
@@ -24,7 +27,7 @@ const CommunitySection = () => (
           content={COPY.footer.button.text}
           href={COPY.footer.button.href}
         >
-          <DiscordIcon src={discordLogo} alt="discord" />
+          <DiscordIcon priority src={discordLogo} alt="discord" />
         </ButtonLink>
       </JoinDiscordContainer>
     </HeroCopy>

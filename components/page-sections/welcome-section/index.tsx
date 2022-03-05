@@ -12,7 +12,10 @@ import {
 } from "./styled";
 
 const WelcomeSection = () => (
-  <Hero gradientType={GradientType.DEFAULT}>
+  <Hero
+    gradientType={GradientType.DEFAULT}
+    className="animate__animated animate__fadeInUp"
+  >
     <RowContainer>
       <HeroCopy
         title={COPY.title}

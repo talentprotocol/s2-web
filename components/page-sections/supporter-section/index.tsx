@@ -9,7 +9,7 @@ import {
 } from "./styled";
 
 const SupporterSection = () => (
-  <Hero>
+  <Hero className="animate__animated animate__fadeInRight">
     <RowContainer>
       <HeroCopy
         title={COPY.title}

@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import { useMemo } from "react";
 import { useMediaQuery } from "utils/useMediaQuery";
 import Logo from "atomic/_atom/logo";
 import { LOGO_SIZE } from "atomic/_atom/logo/types";
@@ -14,18 +14,25 @@ import {
   MobileMenu,
   StyledLink,
 } from "./styled";
+import dynamic from "next/dynamic";
 
 interface Props {
   toggleSidebar: () => void;
   isSidebarVisible: boolean;
 }
 
+const DynamicLogoNoSSR = dynamic(
+  // @ts-ignore
+  () => import("atomic/_atom/logo"),
+  { ssr: false }
+);
+
 const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const memoizedLogo = useMemo(
     () => (
       <LogoArea>
-        <Logo
+        <DynamicLogoNoSSR
           size={isMobile ? LOGO_SIZE.DEFAULT : LOGO_SIZE.MEDIUM}
         />
       </LogoArea>
