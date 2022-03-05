@@ -12,7 +12,7 @@ import {
 
 const SupportedBlockChainsSection = () => (
   <Hero className="animate__animated animate__fadeIn">
-    <HeroCopy subTitle={COPY.subTitle}>
+    <HeroCopy subTitle={COPY.subTitle} isStretched>
       <HorizontalContainer>
         <ImageContainer width="148px">
           <StyledImage src={celoLogo} alt="celo" />

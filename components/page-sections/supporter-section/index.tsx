@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { useWasVisible } from "utils/useWasVisible";
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import { SupporterSection as COPY } from "copy/homepage";
@@ -8,19 +10,30 @@ import {
   StyledImage,
 } from "./styled";
 
-const SupporterSection = () => (
-  <Hero className="animate__animated animate__fadeInRight">
-    <RowContainer>
-      <HeroCopy
-        title={COPY.title}
-        subTitle={COPY.subTitle}
-        description={COPY.description}
-      />
-      <ContentContainer>
-        <StyledImage src={nftCard1} alt="notifications" />
-      </ContentContainer>
-    </RowContainer>
-  </Hero>
-);
+const SupporterSection = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const wasVisible = useWasVisible(ref, "0px");
+  return (
+    <Hero>
+      <RowContainer ref={ref}>
+        <HeroCopy
+          className={
+            wasVisible ? "animate__animated animate__fadeInUp" : ""
+          }
+          title={COPY.title}
+          subTitle={COPY.subTitle}
+          description={COPY.description}
+        />
+        <ContentContainer
+          className={
+            wasVisible ? "animate__animated animate__fadeInRight" : ""
+          }
+        >
+          <StyledImage src={nftCard1} alt="notifications" />
+        </ContentContainer>
+      </RowContainer>
+    </Hero>
+  );
+};
 
 export default SupporterSection;

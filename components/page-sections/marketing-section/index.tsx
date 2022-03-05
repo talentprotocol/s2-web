@@ -11,7 +11,7 @@ import {
 } from "./styled";
 
 const MarketingSection = () => (
-  <Hero className="animate__animated animate__fadeIn">
+  <Hero className="animate__animated animate__fadeInUp">
     <Column>
       <HeroCopy
         title={COPY.title}

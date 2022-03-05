@@ -39,6 +39,9 @@ export const InfoContainer = styled.div`
   margin: 40px 0 0;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    margin: 56px 0 0;
+  }
 `;
 
 export const LogoContainer = styled.div``;
@@ -97,6 +100,12 @@ export const StyledLink = styled.a`
   }
 `;
 
+export const BottomFooterContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
 export const Copyright = styled.span`
   display: block;
   margin: 40px 0 0;
@@ -114,6 +123,11 @@ export const LogosArea = styled.div`
   color: ${COLORS.WHITE};
   display: flex;
   gap: 32px;
+
+  @media (min-width: 768px) {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
 `;
 
 export const ExternalLink = styled.a`

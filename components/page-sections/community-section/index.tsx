@@ -8,33 +8,47 @@ import discordLogo from "atomic/_static/images/discord-white.svg";
 import {
   ContentContainer,
   JoinDiscordContainer,
+  ImageContainer,
   StyledImage,
   DiscordIcon,
 } from "./styled";
+import { useRef } from "react";
+import { useWasVisible } from "../../../utils/useWasVisible";
 
-const CommunitySection = () => (
-  <Hero
-    gradientType={GradientType.RIGHT}
-    className="animate__animated animate__fadeInRight"
-  >
-    <HeroCopy
-      title={COPY.title}
-      subTitle={COPY.subTitle}
-      description={COPY.description}
-    >
-      <JoinDiscordContainer>
-        <ButtonLink
-          content={COPY.footer.button.text}
-          href={COPY.footer.button.href}
-        >
-          <DiscordIcon priority src={discordLogo} alt="discord" />
-        </ButtonLink>
-      </JoinDiscordContainer>
-    </HeroCopy>
-    <ContentContainer>
-      <StyledImage src={nftCard2} alt="community" />
-    </ContentContainer>
-  </Hero>
-);
+const CommunitySection = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const wasVisible = useWasVisible(ref, "0px");
+  return (
+    <Hero gradientType={GradientType.BOTTOM}>
+      <HeroCopy
+        className={
+          wasVisible ? "animate__animated animate__fadeInUp" : ""
+        }
+        title={COPY.title}
+        subTitle={COPY.subTitle}
+        description={COPY.description}
+      >
+        <JoinDiscordContainer>
+          <ButtonLink
+            content={COPY.footer.button.text}
+            href={COPY.footer.button.href}
+          >
+            <DiscordIcon priority src={discordLogo} alt="discord" />
+          </ButtonLink>
+        </JoinDiscordContainer>
+      </HeroCopy>
+      <ContentContainer
+        ref={ref}
+        className={
+          wasVisible ? "animate__animated animate__fadeInRight" : ""
+        }
+      >
+        <ImageContainer>
+          <StyledImage src={nftCard2} alt="community" />
+        </ImageContainer>
+      </ContentContainer>
+    </Hero>
+  );
+};
 
 export default CommunitySection;

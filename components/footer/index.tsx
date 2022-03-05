@@ -25,6 +25,7 @@ import {
   LogosArea,
   StyledImage,
   ExternalLink,
+  BottomFooterContainer,
 } from "./styled";
 
 const Footer = () => {
@@ -76,33 +77,35 @@ const Footer = () => {
         {!isMobile && <ProfileSection />}
       </AlignmentContainer>
       <LineBreak />
-      <Copyright>{COPY.copyright}</Copyright>
-      <LogosArea>
-        <ExternalLink
-          href="https://twitter.com/talentprotocol"
-          target="_blank"
-        >
-          <StyledImage src={twitterLogo} alt="twitter" />
-        </ExternalLink>
-        <ExternalLink
-          href="https://discord.com/invite/a9RYmhxuaP"
-          target="_blank"
-        >
-          <StyledImage src={discordLogo} alt="discord" />
-        </ExternalLink>
-        <ExternalLink
-          href="https://t.me/talentprotocol"
-          target="_blank"
-        >
-          <StyledImage src={telegramLogo} alt="telegram" />
-        </ExternalLink>
-        <ExternalLink
-          href="https://github.com/talentprotocol"
-          target="_blank"
-        >
-          <StyledImage src={githubLogo} alt="github" />
-        </ExternalLink>
-      </LogosArea>
+      <BottomFooterContainer>
+        <Copyright>{COPY.copyright}</Copyright>
+        <LogosArea>
+          <ExternalLink
+            href="https://twitter.com/talentprotocol"
+            target="_blank"
+          >
+            <StyledImage src={twitterLogo} alt="twitter" />
+          </ExternalLink>
+          <ExternalLink
+            href="https://discord.com/invite/a9RYmhxuaP"
+            target="_blank"
+          >
+            <StyledImage src={discordLogo} alt="discord" />
+          </ExternalLink>
+          <ExternalLink
+            href="https://t.me/talentprotocol"
+            target="_blank"
+          >
+            <StyledImage src={telegramLogo} alt="telegram" />
+          </ExternalLink>
+          <ExternalLink
+            href="https://github.com/talentprotocol"
+            target="_blank"
+          >
+            <StyledImage src={githubLogo} alt="github" />
+          </ExternalLink>
+        </LogosArea>
+      </BottomFooterContainer>
     </Container>
   );
 };

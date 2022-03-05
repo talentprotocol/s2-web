@@ -1,12 +1,19 @@
 import Hero from "../../hero";
-import HeroCopy from "../../hero-copy";
 import { ProfileSection as COPY } from "copy/homepage";
 import ButtonLink from "atomic/_atom/button-link";
-import { SectionFooter } from "./styled";
+import {
+  Container,
+  SectionFooter,
+  Title,
+  Paragraph,
+  InfoContainer,
+} from "./styled";
 
 const ProfileSection = () => (
-  <Hero>
-    <HeroCopy title={COPY.title} description={COPY.description}>
+  <Container>
+    <InfoContainer>
+      <Title>{COPY.title}</Title>
+      <Paragraph>{COPY.description}</Paragraph>
       <SectionFooter>
         <ButtonLink
           content={COPY.footer.button.content}
@@ -14,8 +21,8 @@ const ProfileSection = () => (
           href={COPY.footer.button.href}
         />
       </SectionFooter>
-    </HeroCopy>
-  </Hero>
+    </InfoContainer>
+  </Container>
 );
 
 export default ProfileSection;

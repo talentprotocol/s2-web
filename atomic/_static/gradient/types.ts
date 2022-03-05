@@ -1,6 +1,8 @@
 export enum GradientType {
   HIDDEN,
   RIGHT = "RIGHT",
+  LEFT = "LEFT",
+  BOTTOM = "BOTTOM",
   DEFAULT = "DEFAULT",
 }
 

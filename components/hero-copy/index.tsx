@@ -16,6 +16,7 @@ interface Props {
     type: SubTitleType;
     isCentered?: boolean;
   };
+  className?: string;
   title?: string;
   isStretched?: boolean;
   description?: string;
@@ -26,6 +27,7 @@ const HeroCopy = ({
   subTitle,
   title,
   description,
+  className = "",
   isStretched = false,
   children = [],
 }: Props) => {
@@ -59,7 +61,7 @@ const HeroCopy = ({
     [description, title]
   );
   return (
-    <Container isStretched={isStretched}>
+    <Container isStretched={isStretched} className={className}>
       <InfoContainer>
         {memoizedSubTitle}
         {memoizedTitle}

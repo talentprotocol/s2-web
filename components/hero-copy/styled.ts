@@ -20,6 +20,7 @@ export const Container = styled.article<{ isStretched: boolean }>`
 
 export const InfoContainer = styled.div`
   @media (min-width: 768px) {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }

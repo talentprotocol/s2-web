@@ -17,7 +17,7 @@ const Slider = ({ slidesData }: Props) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const target =
-        activeSlide === slidesData.length - 1 ? 0 : activeSlide + 1;
+        activeSlide === slidesData.length - 1 ? 0 : activeSlide - 1;
       setActiveSlide(target);
     }, AUTO_SLIDE_INTERVAL);
     return () => {
