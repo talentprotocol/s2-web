@@ -8,6 +8,7 @@ import { Container, RelativeContainer, StyledImage } from "./styled";
 
 const GradientMap = {
   [GradientType.DEFAULT]: gradientImage,
+  [GradientType.SIDEBAR]: gradientImage,
   [GradientType.RIGHT]: gradientImage2,
   [GradientType.LEFT]: gradientImage3,
   [GradientType.BOTTOM]: gradientImage4,

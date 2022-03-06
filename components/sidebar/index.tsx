@@ -42,11 +42,11 @@ const Sidebar = ({
   return (
     <Container
       className={`animate__animated ${
-        !isClosing ? "animate__fadeInLeft" : "animate__fadeOutLeftBig"
+        !isClosing ? "animate__fadeInLeft" : "animate__fadeOutLeft"
       }`}
       onClick={toggleSidebar}
     >
-      <Gradient type={GradientType.DEFAULT} />
+      <Gradient type={GradientType.SIDEBAR} />
       <LinkList>{memoizedAnchors}</LinkList>
       <ActionArea>
         <ButtonLink

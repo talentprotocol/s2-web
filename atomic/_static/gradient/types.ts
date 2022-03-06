@@ -3,6 +3,7 @@ export enum GradientType {
   RIGHT = "RIGHT",
   LEFT = "LEFT",
   BOTTOM = "BOTTOM",
+  SIDEBAR = "SIDEBAR",
   DEFAULT = "DEFAULT",
 }
 

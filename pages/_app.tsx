@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import ReactGA from "react-ga";
 import type { AppProps } from "next/app";
 import "normalize.css";
 import "animate.css";
@@ -8,6 +9,8 @@ import Header from "components/header";
 import Footer from "components/footer";
 import Sidebar from "components/sidebar";
 import { useSidebar } from "components/sidebar/useSidebar";
+
+ReactGA.initialize("G-2H0VWLM7LB");
 
 function MyApp({ Component, pageProps }: AppProps) {
   const memoizedGlobalStyles = useMemo(() => <GlobalStyles />, []);

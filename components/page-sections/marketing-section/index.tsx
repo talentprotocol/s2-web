@@ -22,6 +22,7 @@ const MarketingSection = () => (
         <ImageContainer>
           <ImageRelativeContainer>
             <StyledImage
+              unoptimized
               src={discoverImage}
               alt="discover mvp"
               priority

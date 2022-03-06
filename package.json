@@ -20,6 +20,7 @@
     "normalize.css": "^8.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-ga": "^3.3.0",
     "react-spring": "^9.4.3",
     "react-spring-3d-carousel": "^1.2.1",
     "styled-components": "^5.3.3"

@@ -136,4 +136,10 @@ export const ExternalLink = styled.a`
   align-items: center;
 `;
 
-export const StyledImage = styled(Image)``;
+export const StyledImage = styled(Image)`
+  transition-duration: 0.3s;
+
+  :hover {
+    filter: brightness(0) invert(1);
+  }
+`;

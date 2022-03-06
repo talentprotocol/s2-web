@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import ProfileSection from "../page-sections/profile-section";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "utils/useMediaQuery";
 import Logo from "atomic/_atom/logo";
 import twitterLogo from "atomic/_static/images/twitter.svg";
@@ -27,6 +27,12 @@ import {
   ExternalLink,
   BottomFooterContainer,
 } from "./styled";
+
+const DynamicProfileSectionNoSSR = dynamic(
+  // @ts-ignore
+  () => import("components/page-sections/profile-section"),
+  { ssr: false }
+);
 
 const Footer = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -74,7 +80,7 @@ const Footer = () => {
             </ListsContainer>
           </AlignmentContainer>
         </ColumnContainer>
-        {!isMobile && <ProfileSection />}
+        {!isMobile && <DynamicProfileSectionNoSSR />}
       </AlignmentContainer>
       <LineBreak />
       <BottomFooterContainer>
@@ -84,25 +90,41 @@ const Footer = () => {
             href="https://twitter.com/talentprotocol"
             target="_blank"
           >
-            <StyledImage src={twitterLogo} alt="twitter" />
+            <StyledImage
+              src={twitterLogo}
+              alt="twitter"
+              title="twitter"
+            />
           </ExternalLink>
           <ExternalLink
             href="https://discord.com/invite/a9RYmhxuaP"
             target="_blank"
           >
-            <StyledImage src={discordLogo} alt="discord" />
+            <StyledImage
+              src={discordLogo}
+              alt="discord"
+              title="discord"
+            />
           </ExternalLink>
           <ExternalLink
             href="https://t.me/talentprotocol"
             target="_blank"
           >
-            <StyledImage src={telegramLogo} alt="telegram" />
+            <StyledImage
+              src={telegramLogo}
+              alt="telegram"
+              title="telegram"
+            />
           </ExternalLink>
           <ExternalLink
             href="https://github.com/talentprotocol"
             target="_blank"
           >
-            <StyledImage src={githubLogo} alt="github" />
+            <StyledImage
+              src={githubLogo}
+              alt="github"
+              title="github"
+            />
           </ExternalLink>
         </LogosArea>
       </BottomFooterContainer>

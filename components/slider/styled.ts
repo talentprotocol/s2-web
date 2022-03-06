@@ -10,11 +10,13 @@ export const Container = styled.div`
     z-index: 10;
     padding: 0 80px;
     width: 80%;
+    transform: translate(20px, 0);
   }
 `;
 
 export const Card = styled.div`
   width: 248px;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     width: 260px;

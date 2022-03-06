@@ -1,4 +1,3 @@
-import Hero from "../../hero";
 import { ProfileSection as COPY } from "copy/homepage";
 import ButtonLink from "atomic/_atom/button-link";
 import {
