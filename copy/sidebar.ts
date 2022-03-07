@@ -30,7 +30,7 @@ export const SidebarCopy = {
   joinButton: {
     content: "Join Waitlist",
     type: ButtonType.PRIMARY,
-    href: "https://talentprotocol.typeform.com/apply",
+    href: "https://talentprotocol.typeform.com/waitlist",
   },
   signInButton: {
     content: "Sign In",

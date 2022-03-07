@@ -97,7 +97,7 @@ const Footer = () => {
             />
           </ExternalLink>
           <ExternalLink
-            href="https://discord.com/invite/a9RYmhxuaP"
+            href="https://discord.com/invite/talentprotocol"
             target="_blank"
           >
             <StyledImage
