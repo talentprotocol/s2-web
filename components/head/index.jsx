@@ -1,10 +1,9 @@
 import NextHead from "next/head";
 
-const Head = () => {
-  const title = "Talent Protocol - Web3 Professional Network";
-  const description = "Talent Protocol is the web3 professional network where high-potential individuals can build an on-chain resume and launch a talent token, allowing anyone to easily invest in their careers."
+const title = "Talent Protocol - Web3 Professional Network";
+const description = "Talent Protocol is the web3 professional network where high-potential individuals can build an on-chain resume and launch a talent token, allowing anyone to easily invest in their careers."
 
-  return (
+const Head = () => (
     <NextHead>
       <title>{title}</title>
       <meta property="og:url" content="https://www.talentprotocol.com" />
@@ -19,7 +18,6 @@ const Head = () => {
 
       <link rel="shortcut icon" href="/favicon.ico" />
     </NextHead>
-  )
-};
+);
 
 export default Head;
