@@ -15,7 +15,7 @@ const Head = () => {
         property="og:description"
         content={description}
       />
-      <meta property="og:image" content="/metaimage.png" />
+      <meta property="og:image" content="/metaimage.jpeg" />
 
       <link rel="shortcut icon" href="/favicon.ico" />
     </NextHead>
