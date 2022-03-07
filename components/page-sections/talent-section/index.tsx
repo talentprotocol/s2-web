@@ -15,7 +15,7 @@ const TalentSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const wasVisible = useWasVisible(ref, "0px");
   return (
-    <Hero gradientType={GradientType.RIGHT}>
+    <Hero gradientType={GradientType.RIGHT} isHidden={!wasVisible}>
       <RowContainer ref={ref}>
         <HeroCopy
           className={
