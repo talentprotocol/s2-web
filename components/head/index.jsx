@@ -10,7 +10,7 @@ const Head = () => {
       <meta property="og:url" content="https://www.talentprotocol.com" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta
         property="og:description"
         content={description}
