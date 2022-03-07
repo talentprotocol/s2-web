@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import "normalize.css";
 import "animate.css";
 import "@fontsource/plus-jakarta-sans";
+import GlobalStyles from "atomic/_static/global-styles";
 import Header from "components/header";
 import Footer from "components/footer";
 import Sidebar from "components/sidebar";
@@ -13,6 +14,7 @@ import { useSidebar } from "components/sidebar/useSidebar";
 ReactGA.initialize("G-2H0VWLM7LB");
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const memoizedGlobalStyles = useMemo(() => <GlobalStyles />, []);
   const sidebarState = useSidebar();
   const memoizedSidebar = useMemo(
     () => (
@@ -28,6 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head />
+      {memoizedGlobalStyles}
       {sidebarState.isSidebarVisible && memoizedSidebar}
       <Header
         toggleSidebar={sidebarState.toggleSidebar}
