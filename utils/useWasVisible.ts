@@ -18,6 +18,6 @@ export const useWasVisible = (
     return () => {
       element?.current && observer.unobserve(element.current);
     };
-  }, [element?.current]);
+  }, [element?.current, wasVisible]);
   return wasVisible;
 };
