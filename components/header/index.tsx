@@ -1,6 +1,8 @@
 import { useMemo } from "react";
+import dynamic from "next/dynamic";
+import Sidebar from "components/sidebar";
+import { useSidebar } from "components/sidebar/useSidebar";
 import { useMediaQuery } from "utils/useMediaQuery";
-import Logo from "atomic/_atom/logo";
 import { LOGO_SIZE } from "atomic/_atom/logo/types";
 import ButtonLink from "atomic/_atom/button-link";
 import { Type as ButtonType } from "atomic/_atom/button-link/types";
@@ -14,12 +16,6 @@ import {
   MobileMenu,
   StyledLink,
 } from "./styled";
-import dynamic from "next/dynamic";
-
-interface Props {
-  toggleSidebar: () => void;
-  isSidebarVisible: boolean;
-}
 
 const DynamicLogoNoSSR = dynamic(
   // @ts-ignore
@@ -27,8 +23,20 @@ const DynamicLogoNoSSR = dynamic(
   { ssr: false }
 );
 
-const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
+const Header = () => {
+  const sidebarState = useSidebar();
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const memoizedSidebar = useMemo(
+    () => (
+      <Sidebar
+        isSidebarVisible={sidebarState.isSidebarVisible}
+        isClosing={sidebarState.isClosing}
+        toggleSidebar={sidebarState.toggleSidebar}
+      />
+    ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [sidebarState.isClosing]
+  );
   const memoizedLogo = useMemo(
     () => (
       <LogoArea>
@@ -40,34 +48,37 @@ const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
     [isMobile]
   );
   return (
-    <HeaderContainer>
-      {memoizedLogo}
-      <ActionArea>
-        <MobileMenu
-          onClick={toggleSidebar}
-          isSidebarVisible={isSidebarVisible}
-        />
-        <LinkList>
-          <LinkListItem>
-            <StyledLink href={COPY.links[0].href} target="blank">
-              {COPY.links[0].name}
-            </StyledLink>
-          </LinkListItem>
-          <LinkListItem>
-            <StyledLink href={COPY.links[1].href} target="blank">
-              {COPY.links[1].name}
-            </StyledLink>
-          </LinkListItem>
-          <LinkListItem>
-            <ButtonLink
-              type={ButtonType.SECONDARY}
-              content={COPY.button.text}
-              href={COPY.button.href}
-            />
-          </LinkListItem>
-        </LinkList>
-      </ActionArea>
-    </HeaderContainer>
+    <>
+      {sidebarState.isSidebarVisible && memoizedSidebar}
+      <HeaderContainer>
+        {memoizedLogo}
+        <ActionArea>
+          <MobileMenu
+            onClick={sidebarState.toggleSidebar}
+            isSidebarVisible={sidebarState.isSidebarVisible}
+          />
+          <LinkList>
+            <LinkListItem>
+              <StyledLink href={COPY.links[0].href} target="blank">
+                {COPY.links[0].name}
+              </StyledLink>
+            </LinkListItem>
+            <LinkListItem>
+              <StyledLink href={COPY.links[1].href} target="blank">
+                {COPY.links[1].name}
+              </StyledLink>
+            </LinkListItem>
+            <LinkListItem>
+              <ButtonLink
+                type={ButtonType.SECONDARY}
+                content={COPY.button.text}
+                href={COPY.button.href}
+              />
+            </LinkListItem>
+          </LinkList>
+        </ActionArea>
+      </HeaderContainer>
+    </>
   );
 };
 
