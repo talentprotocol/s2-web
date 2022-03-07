@@ -19,7 +19,7 @@ const CommunitySection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const wasVisible = useWasVisible(ref, "0px");
   return (
-    <Hero gradientType={GradientType.BOTTOM}>
+    <Hero gradientType={GradientType.BOTTOM} isHidden={!wasVisible}>
       <HeroCopy
         className={
           wasVisible ? "animate__animated animate__fadeInUp" : ""

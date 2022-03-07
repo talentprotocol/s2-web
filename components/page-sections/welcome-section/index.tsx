@@ -17,10 +17,7 @@ const WelcomeSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const wasVisible = useWasVisible(ref, "0px");
   return (
-    <Hero
-      gradientType={GradientType.LEFT}
-      className="animate__animated animate__fadeInUp"
-    >
+    <Hero gradientType={GradientType.LEFT} isHidden={!wasVisible}>
       <RowContainer ref={ref}>
         <HeroCopy
           className={

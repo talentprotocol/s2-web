@@ -8,17 +8,23 @@ interface Props {
   children: JSX.Element | JSX.Element[];
   className?: string;
   gradientType?: GradientType;
+  isHidden?: boolean;
 }
 
 const Hero = ({
   children,
   gradientType = GradientType.HIDDEN,
   className = "",
+  isHidden = false,
 }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const wasVisible = useWasVisible(ref, "0px");
   return (
-    <Container ref={ref} className={wasVisible ? className : ""}>
+    <Container
+      ref={ref}
+      className={wasVisible ? className : ""}
+      isHidden={isHidden}
+    >
       <Gradient type={gradientType} />
       {children}
     </Container>
