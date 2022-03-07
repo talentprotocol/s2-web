@@ -1,8 +1,18 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+export const Column = styled.div`
+  padding: 0 0 64px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+`;
+
 export const ContentContainer = styled.div`
-  margin: 56px 0 0;
+  margin: 40px 0 0;
   width: 540px;
   height: 362px;
   position: relative;
@@ -19,7 +29,9 @@ export const ImageContainer = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    transform: translate(12%, 0);
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 `;
 

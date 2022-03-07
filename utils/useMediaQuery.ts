@@ -1,17 +1,23 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 
 export const useMediaQuery = (query: string): boolean => {
+  const isServerSide = useRef(typeof window === "undefined");
   const getMatches = useCallback((query: string): boolean => {
-    if (typeof window !== "undefined") {
+    if (!isServerSide.current) {
       return window.matchMedia(query).matches;
     }
     return false;
   }, []);
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
+  const [matches, setMatches] = useState<boolean>(
+    !isServerSide.current && getMatches(query)
+  );
   const handleChange = useCallback(() => {
     setMatches(getMatches(query));
   }, [setMatches]);
   useEffect(() => {
+    if (isServerSide.current) {
+      return () => undefined;
+    }
     const matchMedia = window.matchMedia(query);
     handleChange();
     matchMedia.addEventListener("change", handleChange);

@@ -9,7 +9,7 @@ export const RowContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  margin: 56px 0 0;
+  margin: 40px 0 0;
   flex-grow: 1;
 `;
 

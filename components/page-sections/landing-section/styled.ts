@@ -12,11 +12,13 @@ export const RowContainer = styled.div`
 `;
 
 export const SliderContainer = styled.div`
+  padding: 0 24px;
   @media (min-width: 768px) {
     display: flex;
     flex-grow: 1;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 0;
   }
 `;
 
@@ -38,6 +40,7 @@ export const SectionFooter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-end;
 `;
 
 export const SectionFooterCopy = styled.p`

@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 export const useSidebar = () => {
   const [isSidebarVisible, setSidebarStatus] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const toggleSidebar = useCallback(() => {
+    if (isClosing) return;
+    if (isSidebarVisible) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setSidebarStatus(false);
+        setIsClosing(false);
+      }, 250);
+    } else {
+      setSidebarStatus(true);
+      setIsClosing(false);
+    }
+  }, [isClosing, isSidebarVisible, setIsClosing, setSidebarStatus]);
+
   return {
     isSidebarVisible,
-    setSidebarStatus,
+    isClosing,
+    toggleSidebar,
   };
 };

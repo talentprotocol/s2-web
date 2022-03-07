@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "utils/useMediaQuery";
 import { Page } from "atomic/_static/containers";
 import LandingSection from "components/page-sections/landing-section";
@@ -9,7 +10,12 @@ import SupporterSection from "components/page-sections/supporter-section";
 import WelcomeSection from "components/page-sections/welcome-section";
 import MarketingSection from "components/page-sections/marketing-section";
 import CommunitySection from "components/page-sections/community-section";
-import ProfileSection from "components/page-sections/profile-section";
+
+const DynamicProfileSectionNoSSR = dynamic(
+  // @ts-ignore
+  () => import("components/page-sections/profile-section"),
+  { ssr: false }
+);
 
 const Home: NextPage = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -23,7 +29,7 @@ const Home: NextPage = () => {
       <WelcomeSection />
       <MarketingSection />
       <CommunitySection />
-      {isMobile && <ProfileSection />}
+      {isMobile && <DynamicProfileSectionNoSSR />}
     </Page>
   );
 };
