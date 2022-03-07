@@ -14,7 +14,7 @@ const SupporterSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const wasVisible = useWasVisible(ref, "0px");
   return (
-    <Hero>
+    <Hero isHidden={!wasVisible}>
       <RowContainer ref={ref}>
         <HeroCopy
           className={
