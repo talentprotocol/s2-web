@@ -3,7 +3,7 @@ export const HeaderCopy = {
     { name: "Blog", href: "https://blog.talentprotocol.com/" },
     {
       name: "Join Waitlist",
-      href: "https://talentprotocol.typeform.com/apply",
+      href: "https://talentprotocol.typeform.com/waitlist",
     },
   ],
   button: {

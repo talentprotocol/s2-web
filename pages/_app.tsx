@@ -8,6 +8,7 @@ import GlobalStyles from "atomic/_static/global-styles";
 import Header from "components/header";
 import Footer from "components/footer";
 import Sidebar from "components/sidebar";
+import Head from "components/head";
 import { useSidebar } from "components/sidebar/useSidebar";
 
 ReactGA.initialize("G-2H0VWLM7LB");
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
   return (
     <>
+      <Head />
       {memoizedGlobalStyles}
       {sidebarState.isSidebarVisible && memoizedSidebar}
       <Header
