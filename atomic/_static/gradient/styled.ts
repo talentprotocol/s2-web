@@ -21,7 +21,8 @@ const POSITIONS: { [key: string]: any } = {
     transform: translate(35%, -20%);
     
     @media (max-width: 768px) {
-      transform: translate(0%, 65%) scale(2.5, 1.8);
+      transform: translate(0%, 65%) scale(2.5, 2);
+      max-height: 400px;
     }
    `,
   [GradientType.SIDEBAR]: `

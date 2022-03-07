@@ -15,12 +15,16 @@ const Hero = ({
   children,
   gradientType = GradientType.HIDDEN,
   className = "",
-  isHidden = false
+  isHidden = false,
 }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const wasVisible = useWasVisible(ref, "0px");
   return (
-    <Container ref={ref} className={wasVisible ? className : ""} isHidden={isHidden}>
+    <Container
+      ref={ref}
+      className={wasVisible ? className : ""}
+      isHidden={isHidden}
+    >
       <Gradient type={gradientType} />
       {children}
     </Container>

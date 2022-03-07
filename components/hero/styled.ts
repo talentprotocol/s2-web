@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.section<{isHidden: boolean}>`
-  ${({ isHidden }) => isHidden ? "opacity: 0" : "opacity: 1"};
+export const Container = styled.section<{ isHidden: boolean }>`
+  ${({ isHidden }) => (isHidden ? "opacity: 0" : "opacity: 1")};
   padding: 64px 40px;
   position: relative;
   z-index: 1;

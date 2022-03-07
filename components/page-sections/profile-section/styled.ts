@@ -5,6 +5,7 @@ import { COLORS } from "atomic/_static/color-palette";
 export const Container = styled.div`
   @media (max-width: 768px) {
     padding: 0 24px;
+    margin-top: 112px;
   }
 
   @media (min-width: 768px) {
