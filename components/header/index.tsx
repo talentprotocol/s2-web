@@ -13,6 +13,7 @@ import {
   LogoArea,
   MobileMenu,
   StyledLink,
+  StyledButtonLink,
 } from "./styled";
 import dynamic from "next/dynamic";
 
@@ -54,9 +55,9 @@ const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
             </StyledLink>
           </LinkListItem>
           <LinkListItem>
-            <StyledLink href={COPY.links[1].href} target="blank">
+            <StyledButtonLink type="button" className="vrlps-trigger">
               {COPY.links[1].name}
-            </StyledLink>
+            </StyledButtonLink>
           </LinkListItem>
           <LinkListItem>
             <ButtonLink

@@ -10,6 +10,7 @@ import Footer from "components/footer";
 import Sidebar from "components/sidebar";
 import Head from "components/head";
 import { useSidebar } from "components/sidebar/useSidebar";
+import CustomScripts from "components/custom-scripts";
 
 ReactGA.initialize("G-2H0VWLM7LB");
 
@@ -38,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <Component {...pageProps} />
       <Footer />
+      <CustomScripts />
     </>
   );
 }

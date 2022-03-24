@@ -114,3 +114,22 @@ export const StyledLink = styled.a`
     transition: color 0.3s ease;
   }
 `;
+
+export const StyledButtonLink = styled.button`
+  display: block;
+  font-family: ${fontDefault};
+  color: ${COLORS.LIGHT_GREY};
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 165%;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0px;
+
+  &:hover {
+    color: ${COLORS.WHITE};
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+`;

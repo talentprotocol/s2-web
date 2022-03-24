@@ -3,7 +3,7 @@ import { useWasVisible } from "utils/useWasVisible";
 import Hero from "../../hero";
 import HeroCopy from "../../hero-copy";
 import { WelcomeSection as COPY } from "copy/homepage";
-import ButtonLink from "atomic/_atom/button-link";
+import Button from "atomic/_atom/button";
 import rewardsImage from "atomic/_static/images/rewards.png";
 import { GradientType } from "atomic/_static/gradient/types";
 import {
@@ -28,9 +28,9 @@ const WelcomeSection = () => {
           description={COPY.description}
         >
           <SectionFooter>
-            <ButtonLink
+            <Button
               content={COPY.footer.button.text}
-              href={COPY.footer.button.href}
+              className="vrlps-trigger"
             />
           </SectionFooter>
         </HeroCopy>
