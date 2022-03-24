@@ -1,5 +1,5 @@
 import { Type as SubTitleType } from "atomic/_atom/subTitle/types";
-import { Type as ButtonType } from "atomic/_atom/button-link/types";
+import { Variant as ButtonType } from "atomic/_atom/button/types";
 
 export const LandingSection = {
   subTitle: {
@@ -12,7 +12,6 @@ export const LandingSection = {
     label: "#grey#We’re still in #white#private beta",
     button: {
       text: "Join Waitlist",
-      href: "https://talentprotocol.typeform.com/waitlist",
     },
   },
 };
@@ -65,7 +64,6 @@ export const WelcomeSection = {
   footer: {
     button: {
       text: "Join Waitlist",
-      href: "https://talentprotocol.typeform.com/waitlist",
     },
   },
 };
@@ -100,7 +98,6 @@ export const ProfileSection = {
   footer: {
     button: {
       content: "Join Waitlist",
-      href: "https://talentprotocol.typeform.com/waitlist",
       type: ButtonType.SECONDARY,
     },
   },
