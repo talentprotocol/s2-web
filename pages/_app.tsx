@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import ReactGA from "react-ga";
 import type { AppProps } from "next/app";
 import "normalize.css";
 import "animate.css";
@@ -11,8 +10,7 @@ import Sidebar from "components/sidebar";
 import Head from "components/head";
 import { useSidebar } from "components/sidebar/useSidebar";
 import CustomScripts from "components/custom-scripts";
-
-ReactGA.initialize("G-2H0VWLM7LB");
+import GoogleAnalytics from "components/google-analytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const memoizedGlobalStyles = useMemo(() => <GlobalStyles />, []);
@@ -40,6 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <Footer />
       <CustomScripts />
+      <GoogleAnalytics />
     </>
   );
 }
