@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useMediaQuery } from "utils/useMediaQuery";
-import Logo from "atomic/_atom/logo";
 import { LOGO_SIZE } from "atomic/_atom/logo/types";
 import ButtonLink from "atomic/_atom/button-link";
 import { Type as ButtonType } from "atomic/_atom/button-link/types";
@@ -13,7 +12,6 @@ import {
   LogoArea,
   MobileMenu,
   StyledLink,
-  StyledButtonLink,
 } from "./styled";
 import dynamic from "next/dynamic";
 
@@ -55,9 +53,9 @@ const Header = ({ toggleSidebar, isSidebarVisible }: Props) => {
             </StyledLink>
           </LinkListItem>
           <LinkListItem>
-            <StyledButtonLink type="button" className="vrlps-trigger">
+            <StyledLink href={COPY.links[1].href} target="blank">
               {COPY.links[1].name}
-            </StyledButtonLink>
+            </StyledLink>
           </LinkListItem>
           <LinkListItem>
             <ButtonLink

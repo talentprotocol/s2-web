@@ -28,12 +28,12 @@ export const SidebarCopy = {
     },
   ],
   joinButton: {
-    content: "Join Waitlist",
+    content: "Sign Up",
     type: ButtonType.PRIMARY,
-    href: "https://talentprotocol.typeform.com/waitlist",
+    href: "https://beta.talentprotocol.com/sign_up",
   },
   signInButton: {
-    content: "Sign In",
+    content: "Log In",
     type: ButtonType.SECONDARY,
     href: "https://beta.talentprotocol.com/",
   },

@@ -9,7 +9,6 @@ import Footer from "components/footer";
 import Sidebar from "components/sidebar";
 import Head from "components/head";
 import { useSidebar } from "components/sidebar/useSidebar";
-import CustomScripts from "components/custom-scripts";
 import GoogleAnalytics from "components/google-analytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -37,7 +36,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <Component {...pageProps} />
       <Footer />
-      <CustomScripts />
       <GoogleAnalytics />
     </>
   );
