@@ -11,7 +11,8 @@ export const LandingSection = {
   footer: {
     label: "#grey#We’re still in #white#private beta",
     button: {
-      text: "Join Waitlist",
+      text: "Sign Up",
+      href: "https://beta.talentprotocol.com/sign_up",
     },
   },
 };
@@ -63,7 +64,8 @@ export const WelcomeSection = {
     "Season 2 will bring NFTs, on-chain career goals, public profiles, and a new UI. Join the waitlist to access the $TAL token at a discounted price before token launch.",
   footer: {
     button: {
-      text: "Join Waitlist",
+      text: "Sign up",
+      href: "https://beta.talentprotocol.com/sign_up",
     },
   },
 };
@@ -97,7 +99,8 @@ export const ProfileSection = {
     "Join +200 other talent that already launched a token and a global community of +20,000 supporters that can help onboard you to web3.",
   footer: {
     button: {
-      content: "Join Waitlist",
+      text: "Sign Up",
+      href: "https://beta.talentprotocol.com/sign_up",
       type: ButtonType.SECONDARY,
     },
   },

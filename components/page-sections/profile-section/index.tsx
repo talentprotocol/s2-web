@@ -1,6 +1,6 @@
 import { ProfileSection as COPY } from "copy/homepage";
 import ButtonLink from "atomic/_atom/button-link";
-import Button from "atomic/_atom/button";
+import { Type as ButtonType } from "atomic/_atom/button-link/types";
 
 import {
   Container,
@@ -16,10 +16,10 @@ const ProfileSection = () => (
       <Title>{COPY.title}</Title>
       <Paragraph>{COPY.description}</Paragraph>
       <SectionFooter>
-        <Button
-          content={COPY.footer.button.content}
-          variant={COPY.footer.button.type}
-          className="vrlps-trigger"
+        <ButtonLink
+          type={ButtonType.SECONDARY}
+          content={COPY.footer.button.text}
+          href={COPY.footer.button.href}
         />
       </SectionFooter>
     </InfoContainer>

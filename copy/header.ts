@@ -2,12 +2,12 @@ export const HeaderCopy = {
   links: [
     { name: "Blog", href: "https://blog.talentprotocol.com/" },
     {
-      name: "Join Waitlist",
-      href: "https://talentprotocol.typeform.com/waitlist",
+      name: "Sign Up",
+      href: "https://beta.talentprotocol.com/sign_up",
     },
   ],
   button: {
-    text: "Sign In",
+    text: "Log In",
     href: "https://beta.talentprotocol.com/",
   },
 };
