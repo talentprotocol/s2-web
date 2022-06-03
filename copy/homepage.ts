@@ -9,7 +9,7 @@ export const LandingSection = {
   label:
     "#white#The web3 #yellow#professional network #white#for high-potential #yellow#talent#white#.",
   footer: {
-    label: "#grey#We’re still in #white#private beta",
+    label: "#grey#We’re still in #white#beta",
     button: {
       text: "Sign Up",
       href: "https://beta.talentprotocol.com/sign_up",
