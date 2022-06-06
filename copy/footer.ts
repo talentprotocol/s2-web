@@ -19,7 +19,7 @@ export const FooterCopy = {
     links: [
       {
         name: "FAQ",
-        href: "https://talentprotocol.notion.site/FAQ-fc8b458e693149d3ad67c06dc26732f0",
+        href: "https://help.talentprotocol.com/",
       },
       {
         name: "Terms of Service",
