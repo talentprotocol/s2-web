@@ -7,7 +7,7 @@ export const LandingSection = {
     type: SubTitleType.PRIMARY,
   },
   label:
-    "#white#The web3 #yellow#professional network #white#for high-potential #yellow#talent#white#.",
+    "#white#The web3 #yellow#professional network #white#for high-potential #yellow#builders#white#.",
   footer: {
     label: "#grey#We’re still in #white#beta",
     button: {
