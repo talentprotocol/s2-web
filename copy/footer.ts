@@ -1,5 +1,6 @@
 export const FooterCopy = {
-  label: "The web3 professional network for high-potential builders.",
+  label:
+    "The web3 professional community for high-potential builders.",
   projectList: {
     title: "Project",
     links: [
