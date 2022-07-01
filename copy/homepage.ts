@@ -95,7 +95,7 @@ export const ProfileSection = {
   title:
     "Create your web3-native profile. No crypto experience needed.",
   description:
-    "Join +400 other talent that already launched a token and a global community of +100,000 users that can help onboard you to web3.",
+    "Join a global community of +150,000 builders that can help onboard you to web3.",
   footer: {
     button: {
       text: "Sign Up",
