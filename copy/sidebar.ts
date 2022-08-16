@@ -11,8 +11,12 @@ export const SidebarCopy = {
       href: "https://talentprotocol.notion.site/Talent-Protocol-101-26a6c4b9f8284e5e8f55603a38629e76",
     },
     {
-      name: "Partnerships",
-      href: "https://talentprotocol.notion.site/Official-Partnerships-8569a066554c41b197e113d977932f9f",
+      name: "Bounties",
+      href: "https://talentprotocol.notion.site/How-can-you-help-74c27972ac554ce0b9702e8a9131cfa7",
+    },
+    {
+      name: "Ambassadors",
+      href: "https://talentprotocol.notion.site/Ambassadors-Program-194c5580446a45d6b2c510bd8052e91c",
     },
     {
       name: "FAQ",

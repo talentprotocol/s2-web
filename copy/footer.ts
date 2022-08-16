@@ -10,8 +10,12 @@ export const FooterCopy = {
       },
       { name: "Blog", href: "https://blog.talentprotocol.com/" },
       {
-        name: "Partnerships",
-        href: "https://talentprotocol.notion.site/Official-Partnerships-8569a066554c41b197e113d977932f9f",
+        name: "Bounties",
+        href: "https://talentprotocol.notion.site/How-can-you-help-74c27972ac554ce0b9702e8a9131cfa7",
+      },
+      {
+        name: "Ambassadors",
+        href: "https://talentprotocol.notion.site/Ambassadors-Program-194c5580446a45d6b2c510bd8052e91c",
       },
     ],
   },
